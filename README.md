@@ -1,39 +1,42 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Tails and Treats: A Canine Maze Adventure**
 
-Welcome,
+Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## **Table of contents**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+- [**Tails and Treats: A Canine Maze Adventure**](#tails-and-treats-a-canine-maze-adventure)
+  - [**Table of contents**](#table-of-contents)
+  - [**Planning**](#planning)
+    - [**Target Audience**](#target-audience)
+    - [**User Stories**](#user-stories)
+    - [**Features to achieve the goals**](#features-to-achieve-the-goals)
 
-## Codeanywhere Reminders
+## **Planning**
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### **Target Audience**
 
-`python3 -m http.server`
+- People who want to pass the time with a fun game.
+- People who want to challenge themselves finding the best way out of a maze.
+- People who enjoy playing dog-themed games.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### **User Stories**
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- As a user, I want to play a fun game.
+- As a user, I want to get better at the game and find the best way out of a maze.
+- As a user, I want to control a cute dog and navigate it through the maze.
+- As a user, I want to collect dog treats scattered throughout the maze to get points.
+- As a user, I want to customize my game experience.
+- As a user, I want to be able to see my progress throughout the game.
 
-`http_server`
+- As the site owner, I want to ensure the users have a good experience playing my game.
+- As the site owner, I want to provide the users with instructions and feedback.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Features to achieve the goals**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- The game will be free and easy to use with clear instructions to ensure a fun gaming experience.
+- The game will provide the users with feedback on how many points they got and how fast they found their way out of the maze.
+- To make the game dog-themed the character to control around the maze will be a dog. The items to collect within the maze will be dog treats.
+- In order to make the game customizable the users will be able to select the difficulty of the maze and choose one of many dog characters.
+- While playing the game, a timer will be shown as well as a counter for the collected points.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- The ensure a good user experience there will be clear instructions, a well-planned design and layout as well as clear feedback to the users.
