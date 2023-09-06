@@ -13,6 +13,7 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
     - [**Wireframes**](#wireframes)
     - [**Color Scheme**](#color-scheme)
     - [**Fonts**](#fonts)
+    - [**Dog Characters and Treats**](#dog-characters-and-treats)
 
 ## **Planning**
 
@@ -62,3 +63,13 @@ To create the color scheme I started by looking for icons I could use as dog cha
 ### **Fonts**
 
 I decided to use **Shrikhand** for my headings and **Montserrat** for my text. These two fonts seem to pair nicely and I like the bold and playful shape of Shrikhand for the topic of a dog-themed game.
+
+### **Dog Characters and Treats**
+
+I wanted to make the game customizable by letting the users decide which dog they want to navigate through the maze. For this I chose the following five dogs.
+
+![Dog Characters](docs/screenshots/icons_characters.png)
+
+I also looked for icons I could use as treats to scatter throughout the maze.
+
+![Treats](docs/screenshots/icons_treats.png)
