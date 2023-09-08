@@ -11,6 +11,8 @@
     --black: #312a28;
     --brown: #a26938;
     --beige: #eee6d9;
+    --greybrown: #6a574a;
+    --lightbrown: #fccf99;
     --blue: #0b7fab;
     --green: #66802b;
     --orange: #ff6431;
@@ -31,6 +33,9 @@ body {
     flex-direction: column;
     color: var(--black);
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    font-size: 18px;
 }
 
 h1,
@@ -43,4 +48,88 @@ h4 {
 
 img {
     max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Style classes
+   ========================================================================== */
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.bigger-heading {
+    font-size: 2rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    border: 2px solid var(--blue);
+    background: var(--blue);
+    color: var(--beige);
+    display: inline-block;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    margin: 1.5rem;
+}
+
+.cta-button:hover {
+    background: var(--beige);
+    color: var(--blue);
+}
+
+/* ==========================================================================
+   Header styles
+   ========================================================================== */
+header {
+    background: var(--grey);
+    padding: 2rem 0.5rem;
+    border-bottom: 2px solid var(--black);
+}
+
+/* ==========================================================================
+   Footer styles
+   ========================================================================== */
+footer {
+    background: var(--black);
+    color: var(--beige);
+    text-align: center;
+    padding-top: 1rem;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+footer svg {
+    fill: var(--beige);
+    height: 3rem;
+    width: 100%;
+}
+
+.copyright {
+    margin: 0;
+    padding: .5rem 0;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Main content styles
+   ========================================================================== */
+main {
+    padding: 2rem 0;
+    flex-grow: 1;
+    background: var(--grey);
 }
