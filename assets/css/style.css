@@ -89,6 +89,7 @@ figure {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .btn-svg {
@@ -123,6 +124,37 @@ header nav {
 }
 
 /* ==========================================================================
+   Main content styles
+   ========================================================================== */
+main {
+    padding: 2rem;
+    flex-grow: 1;
+    background: var(--grey);
+}
+
+.menu-btn {
+    border: 2px solid var(--greybrown);
+    background: var(--greybrown);
+    color: var(--beige);
+    padding: 2rem 3rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 1.5rem auto;
+    max-width: 500px;
+}
+
+.menu-btn:hover {
+    background: var(--beige);
+    color: var(--greybrown);
+}
+
+nav#main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
    Footer styles
    ========================================================================== */
 footer {
@@ -153,13 +185,4 @@ footer svg {
     margin: 0;
     padding: .5rem 0;
     font-size: 1rem;
-}
-
-/* ==========================================================================
-   Main content styles
-   ========================================================================== */
-main {
-    padding: 2rem 0;
-    flex-grow: 1;
-    background: var(--grey);
 }
