@@ -66,7 +66,7 @@ figure {
     font-size: 2rem;
 }
 
-.cta-button {
+.cta-btn {
     text-decoration: none;
     border: 2px solid var(--blue);
     background: var(--blue);
@@ -78,9 +78,27 @@ figure {
     margin: 1.5rem;
 }
 
-.cta-button:hover {
+.cta-btn:hover {
     background: var(--beige);
     color: var(--blue);
+}
+
+.btn {
+    border: none;
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-svg {
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.svg {
+    margin-right: 0.5rem;
 }
 
 /* ==========================================================================
@@ -90,6 +108,18 @@ header {
     background: var(--grey);
     padding: 2rem 0.5rem;
     border-bottom: 2px solid var(--black);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.btn-svg svg {
+    fill: var(--blue);
+    height: 2.5rem;
+    width: 100%;
 }
 
 /* ==========================================================================
