@@ -187,7 +187,7 @@ nav#main-menu {
     overflow: auto;
     /* fallback */
     background: var(--black); 
-    background: rgba(49, 42, 40, .8);
+    background: rgba(49, 42, 40, .9);
 }
 
 .modal-content {
@@ -220,6 +220,7 @@ nav#main-menu {
 span.icon {
     font-size: 3rem;
     margin-left: 0.2rem;
+    pointer-events: none;
 }
 
 /* start game modal */
