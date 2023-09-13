@@ -231,6 +231,8 @@ span.icon {
 
 .form-heading {
     margin: 3rem 0 1rem 0;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 1.5rem;
 }
 
 #start-game-form figure {
