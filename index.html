@@ -25,20 +25,38 @@
 
         <!-- button for menu only visible while playing the game -->
         <nav id="game-menu">
-            <button id="btn-menu" class="btn btn-svg"><span class="svg">
+            <button id="btn-menu" class="btn btn-svg">Menu<span class="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
-                    </svg></span>Menu</button>
+                    </svg></span></button>
         </nav>
     </header>
 
     <!-- Main content -->
-    <main>
+    <main aria-hidden="false">
         <nav id="main-menu">
             <button id="btn-start-game" class="btn menu-btn">Start new game</button>
             <button id="btn-rules" class="btn menu-btn">Rules</button>
         </nav>
+
+        <!-- rules modal content -->
+        <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description">
+            <div class="modal-content">
+                <button id="close-rules" class="close btn">Close <span class="icon">&times;</span></button>
+                <div class="modal-text">
+                    <h1>Game Rules</h1>
+                    <p>To start the game, click on <span class="bold-text">Start new game</span> in the menu. Then you
+                        will be able
+                        to choose a dog character. Once you chose your character the game begins. You will move your dog
+                        around the maze collecting treats.</p>
+                </div>
+                <div class="screenreader-info" id="modal-rules-description">
+                    This is a modal which overlays the main content. The modal begins with a heading called &quot;Game Rules&quot;. 
+                    Pressing the Close button at the bottom of the modal will close the modal.
+                </div>
+            </div>
+        </aside>
     </main>
 
     <!-- Footer -->

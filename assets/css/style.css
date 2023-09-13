@@ -90,6 +90,7 @@ figure {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    background: none;
 }
 
 .btn-svg {
@@ -99,7 +100,15 @@ figure {
 }
 
 .svg {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.screenreader-info {
+    display: none;
 }
 
 /* ==========================================================================
@@ -152,6 +161,53 @@ main {
 nav#main-menu {
     display: flex;
     flex-direction: column;
+}
+
+/* modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: var(--black);
+    /* fallback */
+    background: rgba(49, 42, 40, .8);
+}
+
+.modal-content {
+    margin: 20% auto;
+    padding: 1rem 2rem 2rem 2rem;
+    border: 1px solid var(--black);
+    background: var(--yellow);
+    color: var(--black);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    color: var(--greybrown);
+    align-self: flex-end;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span.icon {
+    font-size: 3rem;
+    margin-left: 0.2rem;
 }
 
 /* ==========================================================================
