@@ -46,51 +46,69 @@
                 <button id="close-start-game" class="close btn">Close <span class="icon">&times;</span></button>
                 <div class="modal-text">
                     <h1>Choose your dog and difficulty</h1>
-                    <form method="GET" id="start-game-form">
-                        <div class="form-group">
-                            <input type="radio" id="beagle" name="dog" value="beagle" checked>
-                            <label for="beagle">Beagle
-                            <figure>
-                                <img src="assets/images/character_beagle.svg" alt="animated image of a Beagle">
-                            </figure></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="dachshund" name="dog" value="dachshund">
-                            <label for="dachshund">Dachshund
-                            <figure>
-                                <img src="assets/images/character_dachshund.svg" alt="animated image of a Dachshund">
-                            </figure></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="pug" name="dog" value="pug">
-                            <label for="pug">Pug
-                            <figure>
-                                <img src="assets/images/character_pug.svg" alt="animated image of a Pug">
-                            </figure></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="frenchie" name="dog" value="frenchie">
-                            <label for="frenchie">Frenchie
-                            <figure>
-                                <img src="assets/images/character_frenchie.svg" alt="animated image of a Frenchie">
-                            </figure></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="golden" name="dog" value="golden">
-                            <label for="golden">Golden Retriever
-                            <figure>
-                                <img src="assets/images/character_golden_retriever.svg" alt="animated image of a Golden Retriever">
-                            </figure></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" id="easy" name="difficulty" value="easy">
-                            <label for="easy">Easy</label>
-                            <input type="radio" id="average" name="difficulty" value="average" checked>
-                            <label for="average">Average</label>
-                            <input type="radio" id="hard" name="difficulty" value="hard">
-                            <label for="hard">Hard</label>
-                        </div>
-                        <button type="submit" class="btn cta-btn">Start</button>
+                    <form method="GET" id="start-game-form" class="mt-2">
+                        <h2 class="form-heading">Dog</h2>
+                        <fieldset class="dogs">
+                            <div class="form-group">
+                                <input type="radio" id="dachshund" name="dog" value="dachshund" checked>
+                                <label for="dachshund">Dachshund
+                                    <figure>
+                                        <img src="assets/images/character_dachshund.svg"
+                                            alt="animated image of a Dachshund">
+                                    </figure>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="beagle" name="dog" value="beagle">
+                                <label for="beagle">Beagle
+                                    <figure>
+                                        <img src="assets/images/character_beagle.svg" alt="animated image of a Beagle">
+                                    </figure>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="pug" name="dog" value="pug">
+                                <label for="pug">Pug
+                                    <figure>
+                                        <img src="assets/images/character_pug.svg" alt="animated image of a Pug">
+                                    </figure>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="frenchie" name="dog" value="frenchie">
+                                <label for="frenchie">Frenchie
+                                    <figure>
+                                        <img src="assets/images/character_frenchie.svg"
+                                            alt="animated image of a Frenchie">
+                                    </figure>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="golden" name="dog" value="golden">
+                                <label for="golden">Golden Retriever
+                                    <figure>
+                                        <img src="assets/images/character_golden_retriever.svg"
+                                            alt="animated image of a Golden Retriever">
+                                    </figure>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <h2 class="form-heading">Difficulty</h2>
+                        <fieldset class="difficulty">
+                            <div class="form-group">
+                                <input type="radio" id="easy" name="difficulty" value="easy">
+                                <label for="easy">Easy</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="average" name="difficulty" value="average" checked>
+                                <label for="average">Average</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="hard" name="difficulty" value="hard">
+                                <label for="hard">Hard</label>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="cta-btn mt-2">Start</button>
                     </form>
                 </div>
                 <div class="screenreader-info" id="modal-rules-description">
