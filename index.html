@@ -40,6 +40,67 @@
             <button id="btn-rules" class="btn menu-btn">Rules</button>
         </nav>
 
+        <!-- start modal content -->
+        <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description">
+            <div class="modal-content">
+                <button id="close-start-game" class="close btn">Close <span class="icon">&times;</span></button>
+                <div class="modal-text">
+                    <h1>Choose your dog and difficulty</h1>
+                    <form method="GET" id="start-game-form">
+                        <div class="form-group">
+                            <input type="radio" id="beagle" name="dog" value="beagle" checked>
+                            <label for="beagle">Beagle
+                            <figure>
+                                <img src="assets/images/character_beagle.svg" alt="animated image of a Beagle">
+                            </figure></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="dachshund" name="dog" value="dachshund">
+                            <label for="dachshund">Dachshund
+                            <figure>
+                                <img src="assets/images/character_dachshund.svg" alt="animated image of a Dachshund">
+                            </figure></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="pug" name="dog" value="pug">
+                            <label for="pug">Pug
+                            <figure>
+                                <img src="assets/images/character_pug.svg" alt="animated image of a Pug">
+                            </figure></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="frenchie" name="dog" value="frenchie">
+                            <label for="frenchie">Frenchie
+                            <figure>
+                                <img src="assets/images/character_frenchie.svg" alt="animated image of a Frenchie">
+                            </figure></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="golden" name="dog" value="golden">
+                            <label for="golden">Golden Retriever
+                            <figure>
+                                <img src="assets/images/character_golden_retriever.svg" alt="animated image of a Golden Retriever">
+                            </figure></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="easy" name="difficulty" value="easy">
+                            <label for="easy">Easy</label>
+                            <input type="radio" id="average" name="difficulty" value="average" checked>
+                            <label for="average">Average</label>
+                            <input type="radio" id="hard" name="difficulty" value="hard">
+                            <label for="hard">Hard</label>
+                        </div>
+                        <button type="submit" class="btn cta-btn">Start</button>
+                    </form>
+                </div>
+                <div class="screenreader-info" id="modal-rules-description">
+                    This is a modal which overlays the main content. The modal begins with a heading called &quot;Choose
+                    your dog and difficulty&quot;.
+                    Pressing the Close button at the bottom of the modal will close the modal.
+                </div>
+            </div>
+        </aside>
+
         <!-- rules modal content -->
         <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description">
             <div class="modal-content">
@@ -52,7 +113,8 @@
                         around the maze collecting treats.</p>
                 </div>
                 <div class="screenreader-info" id="modal-rules-description">
-                    This is a modal which overlays the main content. The modal begins with a heading called &quot;Game Rules&quot;. 
+                    This is a modal which overlays the main content. The modal begins with a heading called &quot;Game
+                    Rules&quot;.
                     Pressing the Close button at the bottom of the modal will close the modal.
                 </div>
             </div>
