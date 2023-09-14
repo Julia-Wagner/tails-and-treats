@@ -97,3 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     MENU_NAV_BTN.addEventListener("click", openMenu);
     BACK_NAV_BTN.addEventListener("click", closeMenu);
 });
+
+// show the default browser message when the page is reloaded to prevent unwanted exit of the game
+window.onbeforeunload = function () { return ""; };
