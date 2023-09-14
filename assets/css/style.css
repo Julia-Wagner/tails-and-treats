@@ -284,8 +284,7 @@ span.icon {
 }
 
 #maze div div.wall,
-#maze div div.nubbin.wall,
-#maze div div.door.exit {
+#maze div div.treat.wall {
     background-color: var(--greybrown);
 }
 
@@ -295,6 +294,12 @@ span.icon {
 
 #maze div:nth-child(odd) div {
     height: 0.5rem;
+}
+
+#maze div div.door.exit::after {
+    content: url(../images/treat_treats.svg);
+    width: 100%;
+    margin-top: -1rem;
 }
 /* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
