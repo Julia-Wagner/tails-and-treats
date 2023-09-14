@@ -261,6 +261,43 @@ span.icon {
     margin: 0 1rem;
 }
 
+/* maze */
+/* start of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
+#maze-container {
+    margin: 3rem auto;
+    width: fit-content;
+    max-width: 100%;
+}
+
+#maze {
+    background: #ffffff;
+}
+
+#maze div {
+    display: flex;
+}
+
+#maze div div {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+}
+
+#maze div div.wall,
+#maze div div.nubbin.wall,
+#maze div div.door.exit {
+    background-color: var(--greybrown);
+}
+
+#maze div div:nth-child(odd) {
+    width: 0.5rem;
+}
+
+#maze div:nth-child(odd) div {
+    height: 0.5rem;
+}
+/* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
+
 /* ==========================================================================
    Footer styles
    ========================================================================== */
@@ -297,6 +334,4 @@ footer svg {
 /* ==========================================================================
    Media queries
    ========================================================================== */
-@media screen and (min-width: 1000px) {
-    
-}
+@media screen and (min-width: 1000px) {}
