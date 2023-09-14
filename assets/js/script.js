@@ -70,16 +70,25 @@ document.addEventListener("DOMContentLoaded", function () {
         let Maze;
         switch (START_GAME_FORM.difficulty.value) {
             case "easy":
-                Maze = new FancyMazeBuilder(7, 5);
+                Maze = new MazeBuilder(7, 5);
                 break;
             case "medium":
-                Maze = new FancyMazeBuilder(10, 7);
+                Maze = new MazeBuilder(10, 7);
                 break;
             case "hard":
-                Maze = new FancyMazeBuilder(15, 10);
+                Maze = new MazeBuilder(15, 10);
                 break;
         }
         Maze.display("maze-container");
+        checkTreats();
+    }
+
+    function checkTreats(){
+        let hiddenTreats = document.getElementsByClassName("treat");
+        for (let treat of hiddenTreats) {
+            console.log(treat);
+        }
+        console.log(hiddenTreats.length);
     }
 
     // open main menu, show back to game button and hide menu button

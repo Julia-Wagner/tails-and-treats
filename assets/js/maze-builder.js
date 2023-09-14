@@ -33,12 +33,14 @@ class MazeBuilder {
                 /* place exit in top row */
                 let doorPos = this.posToSpace(this.rand(1, this.width));
                 this.maze[r][doorPos] = ["door", "exit"];
-            }
-
-            if (r == this.rows - 1) {
+            } else if (r == this.rows - 1) {
                 /* place entrance in bottom row */
                 let doorPos = this.posToSpace(this.rand(1, this.width));
                 this.maze[r][doorPos] = ["door", "entrance"];
+            } else {
+                /* place treat in row */
+                let treatPos = this.posToSpace(this.rand(1, this.width));
+                this.maze[r][treatPos] = ["treat"];
             }
         });
 
@@ -143,7 +145,6 @@ class MazeBuilder {
         this.partition(horiz + 1, r2, c1, vert - 1);
         this.partition(r1, horiz - 1, vert + 1, c2);
         this.partition(horiz + 1, r2, vert + 1, c2);
-
     }
 
     isGap(...cells) {
