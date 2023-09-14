@@ -1,7 +1,7 @@
 class MazeBuilder {
     // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
     // Please acknowledge use of this code by including this header.
-    // taken from https://www.the-art-of-web.com/javascript/maze-generator/ and adapted to the needs of this game
+    // taken from https://www.the-art-of-web.com/javascript/playable-maze-generator/ and adapted to the needs of this game
     constructor(width, height) {
         this.width = width;
         this.height = height;
@@ -40,7 +40,6 @@ class MazeBuilder {
                 let doorPos = this.posToSpace(this.rand(1, this.width));
                 this.maze[r][doorPos] = ["door", "entrance"];
             }
-
         });
 
         /* start partitioning */

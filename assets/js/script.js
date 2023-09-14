@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let Maze;
         switch (START_GAME_FORM.difficulty.value) {
             case "easy":
-                Maze = new MazeBuilder(7, 7);
+                Maze = new FancyMazeBuilder(7, 5);
                 break;
             case "medium":
-                Maze = new MazeBuilder(10, 10);
+                Maze = new FancyMazeBuilder(10, 7);
                 break;
             case "hard":
-                Maze = new MazeBuilder(15, 15);
+                Maze = new FancyMazeBuilder(15, 10);
                 break;
         }
         Maze.display("maze-container");
