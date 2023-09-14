@@ -194,7 +194,7 @@ nav#main-menu {
     height: 100%;
     overflow: auto;
     /* fallback */
-    background: var(--black); 
+    background: var(--black);
     background: rgba(49, 42, 40, .9);
 }
 

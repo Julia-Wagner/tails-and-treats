@@ -11,6 +11,7 @@ const MENU_CONTAINER = document.getElementById("menu-container");
 const MENU_NAV = document.getElementById("game-menu");
 const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
+const MAZE_CONTAINER = document.getElementById("maze-container");
 
 document.addEventListener("DOMContentLoaded", function () {
     // open the modal given as a parameter
@@ -66,6 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
         MENU_NAV.style.display = "flex";
         MENU_NAV.setAttribute('aria-hidden', 'false');
         closeMenu();
+        let Maze;
+        switch (START_GAME_FORM.difficulty.value) {
+            case "easy":
+                Maze = new MazeBuilder(7, 7);
+                break;
+            case "medium":
+                Maze = new MazeBuilder(10, 10);
+                break;
+            case "hard":
+                Maze = new MazeBuilder(15, 15);
+                break;
+        }
+        Maze.display("maze-container");
     }
 
     // open main menu, show back to game button and hide menu button
@@ -76,6 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
         MENU_NAV_BTN.setAttribute('aria-hidden', 'true');
         BACK_NAV_BTN.style.display = "flex";
         BACK_NAV_BTN.setAttribute('aria-hidden', 'false');
+        MAZE_CONTAINER.style.display = "none";
+        MAZE_CONTAINER.setAttribute('aria-hidden', 'true');
     }
 
     // close main menu, hide back to game button and show menu button
@@ -86,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         BACK_NAV_BTN.setAttribute('aria-hidden', 'true');
         MENU_NAV_BTN.style.display = "flex";
         MENU_NAV_BTN.setAttribute('aria-hidden', 'false');
+        MAZE_CONTAINER.style.display = "relative";
+        MAZE_CONTAINER.setAttribute('aria-hidden', 'false');
     }
 
     // event listeners

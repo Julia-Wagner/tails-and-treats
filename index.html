@@ -50,6 +50,8 @@
             </figure>
         </div>
 
+        <div id="maze-container"></div>
+
         <!-- start game modal content -->
         <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description">
             <div class="modal-content">
@@ -99,8 +101,8 @@
                                 <label for="easy">Easy</label>
                             </div>
                             <div class="form-group">
-                                <input type="radio" id="average" name="difficulty" value="average" checked>
-                                <label for="average">Average</label>
+                                <input type="radio" id="medium" name="difficulty" value="medium" checked>
+                                <label for="medium">Medium</label>
                             </div>
                             <div class="form-group">
                                 <input type="radio" id="hard" name="difficulty" value="hard">
@@ -163,6 +165,8 @@
         <p class="copyright">© 2023 Julia Wagner</p>
     </footer>
     <script src="assets/js/script.js"></script>
+    <!-- class MazeBuilder taken from https://www.the-art-of-web.com/javascript/maze-generator/ and adapted to the needs of this game -->
+    <script src="assets/js/maze-builder.js"></script>
 </body>
 
 </html>
