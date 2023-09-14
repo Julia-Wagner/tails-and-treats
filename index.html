@@ -24,7 +24,7 @@
         <h2>A Canine Maze Adventure</h2>
 
         <!-- button for menu only visible while playing the game -->
-        <nav id="game-menu">
+        <nav id="game-menu" aria-hidden="true">
             <button id="btn-menu" class="btn btn-svg">Menu<span class="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
@@ -35,10 +35,15 @@
 
     <!-- Main content -->
     <main aria-hidden="false">
-        <nav id="main-menu">
-            <button id="btn-start-game" class="btn menu-btn">Start new game</button>
-            <button id="btn-rules" class="btn menu-btn">Rules</button>
-        </nav>
+        <div id="menu-container" class="container">
+            <nav id="main-menu">
+                <button id="btn-start-game" class="btn menu-btn">Start new game</button>
+                <button id="btn-rules" class="btn menu-btn">Rules</button>
+            </nav>
+            <figure>
+                <img src="assets/images/playground.svg" alt="animated image of dogs on a playground">
+            </figure>
+        </div>
 
         <!-- start game modal content -->
         <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description">
