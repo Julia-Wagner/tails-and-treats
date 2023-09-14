@@ -11,7 +11,7 @@ const MENU_CONTAINER = document.getElementById("menu-container");
 const MENU_NAV = document.getElementById("game-menu");
 const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
-const MAZE_CONTAINER = document.getElementById("maze-container");
+const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 
 document.addEventListener("DOMContentLoaded", function () {
     // open the modal given as a parameter
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         BACK_NAV_BTN.setAttribute('aria-hidden', 'true');
         MENU_NAV_BTN.style.display = "flex";
         MENU_NAV_BTN.setAttribute('aria-hidden', 'false');
-        MAZE_CONTAINER.style.display = "relative";
+        MAZE_CONTAINER.style.display = "block";
         MAZE_CONTAINER.setAttribute('aria-hidden', 'false');
     }
 
