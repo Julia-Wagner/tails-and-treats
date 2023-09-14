@@ -240,14 +240,12 @@ span.icon {
     font-size: 1.5rem;
 }
 
-#start-game-form figure {
-    margin: 1rem 0;
-}
-
 #start-game-form img {
     max-height: 200px;
     min-height: 120px;
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
+    margin: 1rem 0;
+    display: block;
 }
 
 .difficulty {
