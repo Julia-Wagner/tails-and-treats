@@ -8,7 +8,9 @@ const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
 const START_GAME_FORM = document.getElementById("start-game-form");
 const MAIN = document.getElementsByTagName("main")[0];
 const MENU_CONTAINER = document.getElementById("menu-container");
-const MENU_BTN = document.getElementById("game-menu");
+const MENU_NAV = document.getElementById("game-menu");
+const MENU_NAV_BTN = document.getElementById("btn-menu");
+const BACK_NAV_BTN = document.getElementById("btn-back");
 
 document.addEventListener("DOMContentLoaded", function () {
     // open the modal given as a parameter
@@ -61,11 +63,29 @@ document.addEventListener("DOMContentLoaded", function () {
     function startGame(e) {
         e.preventDefault();
         closeModal(e);
-        // hide main menu and show menu button
+        MENU_NAV.style.display = "flex";
+        MENU_NAV.setAttribute('aria-hidden', 'false');
+        closeMenu();
+    }
+
+    // open main menu, show back to game button and hide menu button
+    function openMenu() {
+        MENU_CONTAINER.style.display = "block";
+        MENU_CONTAINER.setAttribute('aria-hidden', 'false');
+        MENU_NAV_BTN.style.display = "none";
+        MENU_NAV_BTN.setAttribute('aria-hidden', 'true');
+        BACK_NAV_BTN.style.display = "flex";
+        BACK_NAV_BTN.setAttribute('aria-hidden', 'false');
+    }
+
+    // close main menu, hide back to game button and show menu button
+    function closeMenu() {
         MENU_CONTAINER.style.display = "none";
         MENU_CONTAINER.setAttribute('aria-hidden', 'true');
-        MENU_BTN.style.display = "flex";
-        MENU_BTN.setAttribute('aria-hidden', 'false');
+        BACK_NAV_BTN.style.display = "none";
+        BACK_NAV_BTN.setAttribute('aria-hidden', 'true');
+        MENU_NAV_BTN.style.display = "flex";
+        MENU_NAV_BTN.setAttribute('aria-hidden', 'false');
     }
 
     // event listeners
@@ -74,4 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     START_GAME_MODAL_BTN.addEventListener("click", openModal);
     START_GAME_MODAL_CLOSE.addEventListener("click", closeModal);
     START_GAME_FORM.addEventListener("submit", startGame);
+    MENU_NAV_BTN.addEventListener("click", openMenu);
+    BACK_NAV_BTN.addEventListener("click", closeMenu);
 });
