@@ -310,19 +310,23 @@ span.icon {
     position: absolute;
 }
 
-#maze div.treat:nth-of-type(3n)::after {
+#maze div.treat.bone::after {
+    content: url(../images/treat_bone.svg);
+}
+
+#maze div.treat.can::after {
     content: url(../images/treat_can.svg);
 }
 
-#maze div.treat:nth-of-type(5n)::after {
+#maze div.treat.cookies::after {
     content: url(../images/treat_cookies.svg);
 }
 
-#maze div.treat:nth-of-type(7n)::after {
+#maze div.treat.food::after {
     content: url(../images/treat_food.svg);
 }
 
-#maze div.treat:nth-of-type(13n)::after {
+#maze div.treat.water::after {
     content: url(../images/treat_water.svg);
 }
 /* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */

@@ -83,12 +83,18 @@ document.addEventListener("DOMContentLoaded", function () {
         checkTreats();
     }
 
+    // add class names to the treats to use different treat images for each
     function checkTreats(){
         let hiddenTreats = document.getElementsByClassName("treat");
+        let treatClasses = ["bone", "can", "cookies", "food", "water"];
+        let counter = 0;
         for (let treat of hiddenTreats) {
-            console.log(treat);
+            treat.classList.add(treatClasses[counter]);
+            counter++;
+            if(counter > treatClasses.length -1) {
+                counter = 0;
+            }
         }
-        console.log(hiddenTreats.length);
     }
 
     // open main menu, show back to game button and hide menu button
