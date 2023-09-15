@@ -14,6 +14,9 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
     - [**Color Scheme**](#color-scheme)
     - [**Fonts**](#fonts)
     - [**Dog Characters and Treats**](#dog-characters-and-treats)
+  - [**Features**](#features)
+    - [**Header**](#header)
+    - [**Footer**](#footer)
 
 ## **Planning**
 
@@ -73,3 +76,20 @@ I wanted to make the game customizable by letting the users decide which dog the
 I also looked for icons I could use as treats to scatter throughout the maze.
 
 ![Treats](docs/screenshots/icons_treats.png)
+
+## **Features**
+
+### **Header**
+
+![Desktop header](docs/screenshots/header_desktop.png)
+
+The header contains a heading, subheading and navigation. The navigation is hidden when the user first opens the website. It contains two elements, but only shows one at a time, if any. Once the user starts game, the header navigation shows a button to open the menu. When the menu is open, after a game has been started, the navigation shows a button to go back to the game. If no game has been started yet, the navigation is hidden.
+
+![Mobile header](docs/screenshots/header_mobile.png)
+
+### **Footer**
+
+The footer includes a link to my personal GitHub and LinkedIn pages.
+At the bottom of the footer, I have the copyright information.
+
+![Desktop footer](docs/screenshots/footer_desktop.png)
