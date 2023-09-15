@@ -1,6 +1,6 @@
 # **Tails and Treats: A Canine Maze Adventure**
 
-Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
+Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
 
 ## **Table of contents**
 
@@ -17,13 +17,14 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
   - [**Features**](#features)
     - [**Header**](#header)
     - [**Footer**](#footer)
+    - [**Main Menu**](#main-menu)
 
 ## **Planning**
 
 ### **Target Audience**
 
 - People who want to pass the time with a fun game.
-- People who want to challenge themselves finding the best way out of a maze.
+- People who want to challenge themselves to find the best way out of a maze.
 - People who enjoy playing dog-themed games.
 
 ### **User Stories**
@@ -43,14 +44,14 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript based maze game.
 - The game will be free and easy to use with clear instructions to ensure a fun gaming experience.
 - The game will provide the users with feedback on how many points they got and how fast they found their way out of the maze.
 - To make the game dog-themed the character to control around the maze will be a dog. The items to collect within the maze will be dog treats.
-- In order to make the game customizable the users will be able to select the difficulty of the maze and choose one of many dog characters.
+- To make the game customizable the users will be able to select the difficulty of the maze and choose one of many dog characters.
 - While playing the game, a timer will be shown as well as a counter for the collected points.
 
-- The ensure a good user experience there will be clear instructions, a well-planned design and layout as well as clear feedback to the users.
+- The ensure a good user experience there will be clear instructions, a well-planned design and layout, as well as clear feedback to the users.
 
 ### **Wireframes**
 
-I created wireframes to visualize my ideas using [Balsamiq](https://balsamiq.com/). While creating the mobile wireframes, I realized I was not sure how to let the users control the character without a keyboard. At first I thought I would use touch controls. But after doing some research and playing other maze games on my phone, I realized that was not the best user experience. So I decided to add control buttons to play the game on a phone as shown in my mobile wireframe.
+I created wireframes to visualize my ideas using [Balsamiq](https://balsamiq.com/). While creating the mobile wireframes, I realized I was not sure how to let the users control the character without a keyboard. At first, I thought I would use touch controls. However, after doing some research and playing other maze games on my phone, I realized that was not the best user experience. So I decided to add control buttons to play the game on a phone as shown in my mobile wireframe.
 
 - [Mobile Menu](docs/wireframes/wireframe_mobile_menu.png)
 - [Mobile Game](docs/wireframes/wireframe_mobile_game.png)
@@ -69,7 +70,7 @@ I decided to use **Shrikhand** for my headings and **Montserrat** for my text. T
 
 ### **Dog Characters and Treats**
 
-I wanted to make the game customizable by letting the users decide which dog they want to navigate through the maze. For this I chose the following five dogs.
+I wanted to make the game customizable by letting the users decide which dog they want to navigate through the maze. For this, I chose the following five dogs.
 
 ![Dog Characters](docs/screenshots/icons_characters.png)
 
@@ -83,7 +84,7 @@ I also looked for icons I could use as treats to scatter throughout the maze.
 
 ![Desktop header](docs/screenshots/header_desktop.png)
 
-The header contains a heading, subheading and navigation. The navigation is hidden when the user first opens the website. It contains two elements, but only shows one at a time, if any. Once the user starts game, the header navigation shows a button to open the menu. When the menu is open, after a game has been started, the navigation shows a button to go back to the game. If no game has been started yet, the navigation is hidden.
+The header contains a heading, subheading and navigation. The navigation is hidden when the user first opens the website. It contains two elements, but only shows one at a time, if any. Once the user starts the game, the header navigation shows a button to open the menu. When the menu is open, after a game has been started, the navigation shows a button to go back to the game. If no game has been started yet, the navigation is hidden.
 
 ![Mobile header](docs/screenshots/header_mobile.png)
 
@@ -93,3 +94,9 @@ The footer includes a link to my personal GitHub and LinkedIn pages.
 At the bottom of the footer, I have the copyright information.
 
 ![Desktop footer](docs/screenshots/footer_desktop.png)
+
+### **Main Menu**
+
+The menu is the default landing page for the game. From the menu, the user can either start a new game or read the rules. If a game has already started a game, the navigation in the header allows the user to close the menu and resume playing. Under these two buttons, there is an animated image of dogs playing. The image goes well with the color scheme of the game and introduces the user to the theme of the game.
+
+![Main menu](docs/screenshots/main_menu.png)
