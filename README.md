@@ -19,6 +19,7 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
     - [**Footer**](#footer)
     - [**Main Menu**](#main-menu)
     - [**Rules modal**](#rules-modal)
+    - [**Start new game modal**](#start-new-game-modal)
     - [**Custom 404 Page**](#custom-404-page)
 
 ## **Planning**
@@ -108,6 +109,12 @@ The menu is the default landing page for the game. From the menu, the user can e
 I decided to use a modal to display the game rules. To ensure accessibility, I used the `aria-hidden` attribute to describe which sections of the page are visible depending on the state of the modal.
 
 ![Mobile rules modal](docs/screenshots/rules_mobile.png)
+
+### **Start new game modal**
+
+One of the goals of this game is to make it customizable. That is why the user has to select a dog character and game difficulty before starting to play. To keep the page style consistent, I decided to also use a modal for the **Start new game** button. In this modal, I added a form for the user to select a dog and difficulty. There is an option pre-checked for each to ensure there is a selection made.
+
+![Desktop start game modal](docs/screenshots/start_game_desktop.png)
 
 ### **Custom 404 Page**
 
