@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             case START_GAME_MODAL_BTN:
                 START_GAME_MODAL.style.display = "block";
                 START_GAME_MODAL.setAttribute('aria-hidden', 'false');
+                handleRadioButtons();
                 break;
             default:
                 break;
@@ -75,13 +76,18 @@ document.addEventListener("DOMContentLoaded", function () {
         let Maze;
         switch (START_GAME_FORM.difficulty.value) {
             case "easy":
-                Maze = new MazeBuilder(7, 5);
+                Maze = new MazeBuilder(8, 4);
                 break;
             case "medium":
-                Maze = new MazeBuilder(10, 7);
+                Maze = new MazeBuilder(10, 5);
                 break;
             case "hard":
-                Maze = new MazeBuilder(15, 10);
+                Maze = new MazeBuilder(14, 8);
+                break;
+            case "mobile":
+                Maze = new MazeBuilder(5, 8);
+                break;
+            default:
                 break;
         }
         Maze.display("maze-container");
@@ -92,21 +98,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // add class names to the treats to use different treat images for each
-    function checkTreats(){
+    function checkTreats() {
         let hiddenTreats = document.getElementsByClassName("treat");
         let treatClasses = ["bone", "can", "cookies", "food", "water"];
         let counter = 0;
         for (let treat of hiddenTreats) {
             treat.classList.add(treatClasses[counter]);
             counter++;
-            if(counter > treatClasses.length -1) {
+            if (counter > treatClasses.length - 1) {
                 counter = 0;
             }
         }
     }
 
     // add dog class to the entrance div
-    function placeDog(dog){
+    function placeDog(dog) {
         let entrance = document.getElementsByClassName("entrance")[0];
         entrance.classList.add(dog, "dog");
     }
@@ -133,6 +139,16 @@ document.addEventListener("DOMContentLoaded", function () {
         MENU_NAV_BTN.setAttribute('aria-hidden', 'false');
         MAZE_CONTAINER.style.display = "block";
         MAZE_CONTAINER.setAttribute('aria-hidden', 'false');
+    }
+
+    function handleRadioButtons() {
+        let screenWidth = window.innerWidth;
+
+        if (screenWidth < 600) {
+            document.getElementById('mobile').checked = true;
+        } else {
+            document.getElementById('medium').checked = true;
+        }
     }
 
     // event listeners

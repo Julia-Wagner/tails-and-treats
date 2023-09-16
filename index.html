@@ -53,7 +53,7 @@
         <div id="outer-maze-container" class="container">
             <div id="maze-container"></div>
         </div>
-        
+
         <!-- start game modal content -->
         <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description">
             <div class="modal-content">
@@ -96,20 +96,29 @@
                                 </label>
                             </div>
                         </fieldset>
-                        <fieldset class="difficulty">
+                        <fieldset class="difficulty desktop">
                             <legend class="form-heading">Difficulty</legend>
                             <div class="form-group">
                                 <input type="radio" id="easy" name="difficulty" value="easy" required>
                                 <label for="easy">Easy</label>
                             </div>
                             <div class="form-group">
-                                <input type="radio" id="medium" name="difficulty" value="medium" checked>
+                                <input type="radio" id="medium" name="difficulty" value="medium">
                                 <label for="medium">Medium</label>
                             </div>
                             <div class="form-group">
                                 <input type="radio" id="hard" name="difficulty" value="hard">
                                 <label for="hard">Hard</label>
                             </div>
+                        </fieldset>
+                        <fieldset class="difficulty mobile">
+                            <legend class="form-heading">Difficulty</legend>
+                            <div class="form-group">
+                                <input type="radio" id="mobile" name="difficulty" value="mobile" required>
+                                <label for="mobile">Mobile</label>
+                            </div>
+                            <p class="italic-info">Only one type of maze is available for your screen size. To choose a
+                                different maze use a bigger device like a laptop or rotate your phone.</p>
                         </fieldset>
                         <button type="submit" class="cta-btn mt-2">Start</button>
                     </form>
