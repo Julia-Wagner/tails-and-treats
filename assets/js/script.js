@@ -169,8 +169,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            // remove treat from maze if it was collected
+            if (nextClass.includes("treat")) {
+                console.log("collect");
+                this.maze[nextPos].classList.remove("treat");
+            }
+
             this.maze[dogPos].classList.remove("dog");
             this.maze[nextPos].classList.add("dog", START_GAME_FORM.dog.value);
+
         }
     }
 
