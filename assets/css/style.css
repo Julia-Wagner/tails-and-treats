@@ -17,6 +17,7 @@
     --green: #66802b;
     --orange: #ff6431;
     --yellow: #ffcf5f;
+    --lightblue: #2aa2cf;
 }
 
 /* override default browser styles and add general styles */
@@ -246,6 +247,7 @@ span.icon {
 #start-game-form img {
     max-height: 200px;
     min-height: 120px;
+    height: 70%;
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
     margin: 1rem 0;
     display: block;
@@ -339,14 +341,14 @@ span.icon {
 /* dog character */
 #maze div.dog::after {
     content: "";
-    width: 120%;
+    width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--yellow);
+    background-color: var(--lightblue);
     filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.4));
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 95% 95%;
+    background-size: 90% 90%;
     z-index: 99;
 }
 
