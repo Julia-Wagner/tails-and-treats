@@ -7,6 +7,7 @@ const START_GAME_MODAL_BTN = document.getElementById("btn-start-game");
 const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
 const START_GAME_FORM = document.getElementById("start-game-form");
 const MAIN = document.getElementsByTagName("main")[0];
+const BODY = document.getElementsByTagName("body")[0];
 const MENU_CONTAINER = document.getElementById("menu-container");
 const MENU_NAV = document.getElementById("game-menu");
 const MENU_NAV_BTN = document.getElementById("btn-menu");
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function openModal(e) {
         // set aria-hidden for the main content hidden behind the modal for accessibility
         MAIN.setAttribute('aria-hidden', 'true');
+        // set overflow: hidden for the body to prevent scrolling the hidden content
+        BODY.style.overflow = "hidden";
         // open the model according to the clicked button
         switch (e.target) {
             // open rules modal
@@ -38,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // close the modal given as a parameter
     function closeModal(e) {
         MAIN.setAttribute('aria-hidden', 'false');
+        BODY.style.overflow = "unset";
         // close the model according to the clicked button
         switch (e.target) {
             // close rules modal

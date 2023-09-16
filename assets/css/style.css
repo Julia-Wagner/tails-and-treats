@@ -200,7 +200,7 @@ nav#main-menu {
 }
 
 .modal-content {
-    margin: 20% auto;
+    margin: 10% auto;
     padding: 1rem 2rem 2rem 2rem;
     border: 1px solid var(--black);
     background: var(--grey);
