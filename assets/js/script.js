@@ -17,6 +17,16 @@ const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 // global variable to check if the game is active
 let isPlaying = false;
 
+// necessary to move the dog character
+// adapted from https://www.the-art-of-web.com/mazing.js
+let Position = function (x, y) {
+    this.x = x;
+    this.y = y;
+}
+Position.prototype.toString = function () {
+    return this.x + ":" + this.y;
+};
+
 document.addEventListener("DOMContentLoaded", function () {
     // open the modal given as a parameter
     function openModal(e) {
@@ -104,31 +114,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function checkKey(e) {
         if (!isPlaying) {
-            console.log("NO");
             return;
         } else {
             e = e || window.event;
             switch (e.keyCode) {
                 // up arrow
                 case 38:
-                    console.log("up");
+                    moveDog("up");
                     break;
                 // down arrow
                 case 40:
-                    console.log("down");
+                    moveDog("down");
                     break;
                 // left arrow
                 case 37:
-                    console.log("left");
+                    moveDog("left");
                     break;
                 // right arrow
                 case 39:
-                    console.log("right");
+                    moveDog("right");
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    // function adapted from https://www.the-art-of-web.com/mazing.js
+    function moveDog(direction) {
+        dogPos = findDog();
+        let nextPos = new Position(dogPos.x, dogPos.y);
+
+        if (dogPos) {
+            switch (direction) {
+                case "up":
+                    nextPos.x--;
+                    break;
+                case "down":
+                    nextPos.x++;
+                    break;
+                case "left":
+                    nextPos.y--;
+                    break;
+                case "right":
+                    nextPos.y++;
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (this.maze[nextPos]) {
+            var nextClass = this.maze[nextPos].className;
+            if (nextClass == "wall") {
+                return;
+            }
+
+            this.maze[dogPos].classList.remove("dog");
+            this.maze[nextPos].classList.add("dog");
+        }
+    }
+
+    // function adapted from https://www.the-art-of-web.com/mazing.js
+    function findDog() {
+        this.mazeContainer = document.getElementById("maze");
+
+        for (i = 0; i < this.mazeContainer.children.length; i++) {
+            for (j = 0; j < this.mazeContainer.children[i].children.length; j++) {
+                let el = this.mazeContainer.children[i].children[j];
+                this.maze[new Position(i, j)] = el;
+                if (el.classList.contains("dog")) {
+                    /* get position of the dog */
+                    this.dogPos = new Position(i, j);
+                }
+            }
+        }
+
+        return this.dogPos;
     }
 
     // add class names to the treats to use different treat images for each
