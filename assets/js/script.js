@@ -95,6 +95,32 @@ document.addEventListener("DOMContentLoaded", function () {
         checkTreats();
         // place the selected dog character
         placeDog(START_GAME_FORM.dog.value);
+        // listen to key presses once the maze has been initialized
+        document.onkeydown = checkKey;
+    }
+
+    function checkKey(e) {
+        e = e || window.event;
+        switch (e.keyCode) {
+            // up arrow
+            case 38:
+                console.log("up");
+                break;
+            // down arrow
+            case 40:
+                console.log("down");
+                break;
+            // left arrow
+            case 37:
+                console.log("left");
+                break;
+            // right arrow
+            case 39:
+                console.log("right");
+                break;
+            default:
+                break;
+        }
     }
 
     // add class names to the treats to use different treat images for each
