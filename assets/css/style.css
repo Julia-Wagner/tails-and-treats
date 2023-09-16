@@ -297,39 +297,44 @@ span.icon {
 #maze div div.treat.wall {
     background-color: var(--greybrown);
 }
+/* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
+/* exit */
 #maze div div.door.exit::after {
     content: url(../images/treat_treats.svg);
     width: 100%;
     margin-top: -100%;
 }
 
+/* treats */
 #maze div div.treat::after {
-    content: url(../images/treat_bone.svg);
-    width: 80%;
+    content: "";
+    width: 90%;
+    height: 90%;
     position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #maze div.treat.bone::after {
-    content: url(../images/treat_bone.svg);
+    background-image: url(../images/treat_bone.svg);
 }
 
 #maze div.treat.can::after {
-    content: url(../images/treat_can.svg);
+    background-image: url(../images/treat_can.svg);
 }
 
 #maze div.treat.cookies::after {
-    content: url(../images/treat_cookies.svg);
+    background-image: url(../images/treat_cookies.svg);
 }
 
 #maze div.treat.food::after {
-    content: url(../images/treat_food.svg);
+    background-image: url(../images/treat_food.svg);
 }
 
 #maze div.treat.water::after {
-    content: url(../images/treat_water.svg);
+    background-image: url(../images/treat_water.svg);
 }
-/* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
 /* ==========================================================================
    Footer styles
