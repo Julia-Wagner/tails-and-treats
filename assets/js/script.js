@@ -14,9 +14,13 @@ const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
 const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 
+// global variable to check if the game is active
+let isPlaying = false;
+
 document.addEventListener("DOMContentLoaded", function () {
     // open the modal given as a parameter
     function openModal(e) {
+        isPlaying = false;
         // set aria-hidden for the main content hidden behind the modal for accessibility
         MAIN.setAttribute('aria-hidden', 'true');
         // set overflow: hidden for the body to prevent scrolling the hidden content
@@ -67,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // start the game with the selected options from the form
     function startGame(e) {
+        isPlaying = true;
         e.preventDefault();
         closeModal(e);
         MENU_NAV.style.display = "flex";
@@ -95,31 +100,34 @@ document.addEventListener("DOMContentLoaded", function () {
         checkTreats();
         // place the selected dog character
         placeDog(START_GAME_FORM.dog.value);
-        // listen to key presses once the maze has been initialized
-        document.onkeydown = checkKey;
     }
 
     function checkKey(e) {
-        e = e || window.event;
-        switch (e.keyCode) {
-            // up arrow
-            case 38:
-                console.log("up");
-                break;
-            // down arrow
-            case 40:
-                console.log("down");
-                break;
-            // left arrow
-            case 37:
-                console.log("left");
-                break;
-            // right arrow
-            case 39:
-                console.log("right");
-                break;
-            default:
-                break;
+        if (!isPlaying) {
+            console.log("NO");
+            return;
+        } else {
+            e = e || window.event;
+            switch (e.keyCode) {
+                // up arrow
+                case 38:
+                    console.log("up");
+                    break;
+                // down arrow
+                case 40:
+                    console.log("down");
+                    break;
+                // left arrow
+                case 37:
+                    console.log("left");
+                    break;
+                // right arrow
+                case 39:
+                    console.log("right");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -145,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // open main menu, show back to game button and hide menu button
     function openMenu() {
+        isPlaying = false;
         MENU_CONTAINER.style.display = "block";
         MENU_CONTAINER.setAttribute('aria-hidden', 'false');
         MENU_NAV_BTN.style.display = "none";
@@ -157,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // close main menu, hide back to game button and show menu button
     function closeMenu() {
+        isPlaying = true;
         MENU_CONTAINER.style.display = "none";
         MENU_CONTAINER.setAttribute('aria-hidden', 'true');
         BACK_NAV_BTN.style.display = "none";
@@ -178,14 +188,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // event listeners
+    // modal listeners
     RULES_MODAL_BTN.addEventListener("click", openModal);
     RULES_MODAL_CLOSE.addEventListener("click", closeModal);
     START_GAME_MODAL_BTN.addEventListener("click", openModal);
     START_GAME_MODAL_CLOSE.addEventListener("click", closeModal);
+    // game and navigation listeners
     START_GAME_FORM.addEventListener("submit", startGame);
     MENU_NAV_BTN.addEventListener("click", openMenu);
     BACK_NAV_BTN.addEventListener("click", closeMenu);
+    // key press listener
+    document.onkeydown = checkKey;
+    // show the default browser message when the page is reloaded to prevent unwanted exit of the game
+    window.onbeforeunload = function () { return ""; };
 });
-
-// show the default browser message when the page is reloaded to prevent unwanted exit of the game
-window.onbeforeunload = function () { return ""; };
