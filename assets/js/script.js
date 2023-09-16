@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         MENU_NAV.style.display = "flex";
         MENU_NAV.setAttribute('aria-hidden', 'false');
         closeMenu();
+        // initialize the maze based on the selected difficulty
         let Maze;
         switch (START_GAME_FORM.difficulty.value) {
             case "easy":
@@ -80,7 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
         Maze.display("maze-container");
+        // place treats inside the maze
         checkTreats();
+        // place the selected dog character
+        placeDog(START_GAME_FORM.dog.value);
     }
 
     // add class names to the treats to use different treat images for each
@@ -95,6 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 counter = 0;
             }
         }
+    }
+
+    // add dog class to the entrance div
+    function placeDog(dog){
+        let entrance = document.getElementsByClassName("entrance")[0];
+        entrance.classList.add(dog, "dog");
     }
 
     // open main menu, show back to game button and hide menu button

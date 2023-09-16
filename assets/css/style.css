@@ -336,6 +336,40 @@ span.icon {
     background-image: url(../images/treat_water.svg);
 }
 
+/* dog character */
+#maze div.dog::after {
+    content: "";
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--yellow);
+    filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.4));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95% 95%;
+    z-index: 99;
+}
+
+#maze div.dog.dachshund::after {
+    background-image: url(../images/character_dachshund.svg);
+}
+
+#maze div.dog.beagle::after {
+    background-image: url(../images/character_beagle.svg);
+}
+
+#maze div.dog.pug::after {
+    background-image: url(../images/character_pug.svg);
+}
+
+#maze div.dog.frenchie::after {
+    background-image: url(../images/character_frenchie.svg);
+}
+
+#maze div.dog.golden::after {
+    background-image: url(../images/character_golden_retriever.svg);
+}
+
 /* ==========================================================================
    Footer styles
    ========================================================================== */
