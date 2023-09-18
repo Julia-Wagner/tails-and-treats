@@ -175,8 +175,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function moveDog(direction) {
         dogPos = findDog();
         let nextPos = new Position(dogPos.x, dogPos.y);
+        var dir;
 
         if (dogPos) {
+            if (this.maze[dogPos].classList.contains("right")) {
+                dir = "right";
+            } else if (this.maze[dogPos].classList.contains("left")) {
+                dir = "left";
+            }
             switch (direction) {
                 case "up":
                     nextPos.x--;
@@ -186,9 +192,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 case "left":
                     nextPos.y--;
+                    dir = "left";
                     break;
                 case "right":
                     nextPos.y++;
+                    dir = "right";
                     break;
                 default:
                     break;
@@ -198,6 +206,14 @@ document.addEventListener("DOMContentLoaded", function () {
             var nextClass = this.maze[nextPos].className;
             if (nextClass == "wall") {
                 return;
+            }
+
+            if (dir === "right") {
+                this.maze[nextPos].classList.remove("left");
+                this.maze[nextPos].classList.add("right");
+            } else if (dir === "left") {
+                this.maze[nextPos].classList.remove("right");
+                this.maze[nextPos].classList.add("left");
             }
 
             // remove treat from maze if it was collected
@@ -246,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // add dog class to the entrance div
     function placeDog(dog) {
         let entrance = document.getElementsByClassName("entrance")[0];
-        entrance.classList.add(dog, "dog");
+        entrance.classList.add(dog, "dog", "right");
     }
 
     // open main menu, show back to game button and hide menu button

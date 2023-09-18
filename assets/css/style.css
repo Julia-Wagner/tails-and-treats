@@ -366,6 +366,14 @@ span.icon {
     z-index: 99;
 }
 
+#maze div.dog.left::after {
+    transform:scaleX(-1);
+}
+
+#maze div.dog.right::after {
+    transform:scaleX(1);
+}
+
 #maze div.dog.dachshund::after {
     background-image: url(../images/character_dachshund.svg);
 }
