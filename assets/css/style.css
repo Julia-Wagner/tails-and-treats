@@ -284,7 +284,7 @@ span.icon {
 
 /* start of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 #maze-container {
-    margin: 3rem auto;
+    margin: 3rem auto 1rem auto;
     width: 100%;
 }
 
@@ -396,6 +396,30 @@ span.icon {
 
 #maze div.dog.golden::after {
     background-image: url(../images/character_golden_retriever.svg);
+}
+
+/* progress icons */
+.progress {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.progress-icon {
+    height: 3rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.progress-icon svg {
+    fill: var(--black);
+    height: 100%;
+    width: 100%;
+}
+
+.progress-text {
+    margin-left: 1rem;
 }
 
 /* arrow controls */
