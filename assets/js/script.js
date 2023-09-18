@@ -8,6 +8,8 @@ const START_GAME_MODAL_BTN = document.getElementById("btn-start-game");
 const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
 const CONGRATULATIONS_MODAL = document.getElementById("modal-congratulations");
 const CONGRATULATIONS_TEXT = document.getElementById("congratulations-text");
+const CONGRATULATIONS_DOG = document.getElementById("congratulations-dog");
+const CONGRATULATIONS_BOWL = document.getElementById("congratulations-bowl");
 const START_GAME_FORM = document.getElementById("start-game-form");
 const RELOAD = document.getElementById("reload");
 // dom elements
@@ -272,6 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
         CONGRATULATIONS_MODAL.style.display = "block";
         CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
         CONGRATULATIONS_TEXT.innerText = "You collected " + treatsCollected + " out of " + treatsAvailable + " treats in a time of " + timePassed + "!";
+        CONGRATULATIONS_DOG.innerHTML = '<img src="assets/images/character_' + START_GAME_FORM.dog.value + '.svg" alt="animated image of a ' + START_GAME_FORM.dog.value +'">';
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js

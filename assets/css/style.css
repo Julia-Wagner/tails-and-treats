@@ -85,6 +85,7 @@ fieldset {
     max-width: 300px;
     width: 100%;
     margin: 1.5rem auto;
+    cursor: pointer;
 }
 
 .cta-btn:hover {
@@ -277,6 +278,14 @@ span.icon {
     display: none;
 }
 
+/* congratulations modal */
+#congratulations-dog img {
+    max-height: 200px;
+    min-height: 120px;
+    filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
+    margin: 2rem 0 1rem 0;
+}
+
 /* maze */
 #outer-maze-container {
     display: none;
@@ -394,8 +403,8 @@ span.icon {
     background-image: url(../images/character_frenchie.svg);
 }
 
-#maze div.dog.golden::after {
-    background-image: url(../images/character_golden_retriever.svg);
+#maze div.dog.retriever::after {
+    background-image: url(../images/character_retriever.svg);
 }
 
 /* progress icons */
