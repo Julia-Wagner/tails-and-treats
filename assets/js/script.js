@@ -1,4 +1,5 @@
 // global constants
+// modals
 const RULES_MODAL = document.getElementById("modal-rules");
 const RULES_MODAL_BTN = document.getElementById("btn-rules");
 const RULES_MODAL_CLOSE = document.getElementById("close-rules");
@@ -6,6 +7,7 @@ const START_GAME_MODAL = document.getElementById("modal-start-game");
 const START_GAME_MODAL_BTN = document.getElementById("btn-start-game");
 const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
 const START_GAME_FORM = document.getElementById("start-game-form");
+// dom elements
 const MAIN = document.getElementsByTagName("main")[0];
 const BODY = document.getElementsByTagName("body")[0];
 const MENU_CONTAINER = document.getElementById("menu-container");
@@ -13,6 +15,8 @@ const MENU_NAV = document.getElementById("game-menu");
 const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
 const MAZE_CONTAINER = document.getElementById("outer-maze-container");
+const TREATS = document.getElementById("treats");
+// control arrows
 const CONTROL_UP = document.getElementById("up");
 const CONTROL_LEFT = document.getElementById("left");
 const CONTROL_DOWN = document.getElementById("down");
@@ -20,6 +24,7 @@ const CONTROL_RIGHT = document.getElementById("right");
 
 // global variable to check if the game is active
 let isPlaying = false;
+let treatsCollected = 0;
 
 // necessary to move the dog character
 // adapted from https://www.the-art-of-web.com/mazing.js
@@ -224,6 +229,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (nextClass.includes("treat")) {
                 console.log("collect");
                 this.maze[nextPos].classList.remove("treat");
+                treatsCollected++;
+                TREATS.innerText = treatsCollected;
             }
 
             this.maze[dogPos].classList.remove("dog");
