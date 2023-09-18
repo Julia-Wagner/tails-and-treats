@@ -124,18 +124,22 @@ document.addEventListener("DOMContentLoaded", function () {
             switch (e.keyCode) {
                 // up arrow
                 case 38:
+                    e.preventDefault();
                     moveDog("up");
                     break;
                 // down arrow
                 case 40:
+                    e.preventDefault();
                     moveDog("down");
                     break;
                 // left arrow
                 case 37:
+                    e.preventDefault();
                     moveDog("left");
                     break;
                 // right arrow
                 case 39:
+                    e.preventDefault();
                     moveDog("right");
                     break;
                 default:
