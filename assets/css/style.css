@@ -298,6 +298,10 @@ span.icon {
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
 }
 
+#congratulations-text {
+    font-size: 1.5rem;
+}
+
 /* maze */
 #outer-maze-container {
     display: none;
