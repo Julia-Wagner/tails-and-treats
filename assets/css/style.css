@@ -274,6 +274,10 @@ span.icon {
 }
 
 /* maze */
+#outer-maze-container {
+    display: none;
+}
+
 /* start of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 #maze-container {
     margin: 3rem auto;
@@ -309,7 +313,6 @@ span.icon {
 #maze div div.treat.wall {
     background-color: var(--greybrown);
 }
-
 /* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
 /* exit */
@@ -383,6 +386,18 @@ span.icon {
     background-image: url(../images/character_golden_retriever.svg);
 }
 
+/* arrow controls */
+.control {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background: var(--greybrown);
+  display: inline-block;
+}
+
+.control svg {
+    fill: var(--beige);
+}
 /* ==========================================================================
    Footer styles
    ========================================================================== */

@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             this.maze[dogPos].classList.remove("dog");
             this.maze[nextPos].classList.add("dog", START_GAME_FORM.dog.value);
-
         }
     }
 
