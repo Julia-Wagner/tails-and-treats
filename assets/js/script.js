@@ -34,6 +34,7 @@ let isPlaying = false;
 let treatsCollected = 0;
 let treatsAvailable;
 let timePassed;
+let timer = false;
 
 // necessary to move the dog character
 // adapted from https://www.the-art-of-web.com/mazing.js
@@ -99,6 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // start the game with the selected options from the form
     function startGame(e) {
+        if (timer) {
+            clearInterval(timerInterval);
+        }
         isPlaying = true;
         e.preventDefault();
         closeModal(e);
@@ -133,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startTimer() {
+        timer = true;
         let start = Date.now();
         timerInterval = setInterval(function () {
             let time = Date.now() - start;
@@ -266,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function endGame() {
         isPlaying = false;
         clearInterval(timerInterval);
+        timer = false;
         // set aria-hidden for the main content hidden behind the modal for accessibility
         MAIN.setAttribute('aria-hidden', 'true');
         // set overflow: hidden for the body to prevent scrolling the hidden content
@@ -274,7 +280,20 @@ document.addEventListener("DOMContentLoaded", function () {
         CONGRATULATIONS_MODAL.style.display = "block";
         CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
         CONGRATULATIONS_TEXT.innerText = "You collected " + treatsCollected + " out of " + treatsAvailable + " treats in a time of " + timePassed + "!";
-        CONGRATULATIONS_DOG.innerHTML = '<img src="assets/images/character_' + START_GAME_FORM.dog.value + '.svg" alt="animated image of a ' + START_GAME_FORM.dog.value +'">';
+        CONGRATULATIONS_DOG.innerHTML = '<img src="assets/images/character_' + START_GAME_FORM.dog.value + '.svg" alt="animated image of a ' + START_GAME_FORM.dog.value + '">';
+        // calculate treat amount
+        let bowl;
+        let points = treatsAvailable / treatsCollected;
+        if (points === 1) {
+            bowl = "extra_full";
+        } else if (points == "Infinity") {
+            bowl = "empty";
+        } else if (points < 2) {
+            bowl = "full";
+        } else {
+            bowl = "half_full";
+        }
+        CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js

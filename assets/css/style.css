@@ -279,11 +279,23 @@ span.icon {
 }
 
 /* congratulations modal */
+.congratulations-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
 #congratulations-dog img {
-    max-height: 200px;
-    min-height: 120px;
+    height: 300px;
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
-    margin: 2rem 0 1rem 0;
+}
+
+#congratulations-bowl img {
+    max-height: 120px;
+    min-height: 100px;
+    filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
 }
 
 /* maze */
@@ -326,6 +338,7 @@ span.icon {
 #maze div div.treat.wall {
     background-color: var(--greybrown);
 }
+
 /* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
 /* exit */
@@ -380,11 +393,11 @@ span.icon {
 }
 
 #maze div.dog.left::after {
-    transform:scaleX(-1);
+    transform: scaleX(-1);
 }
 
 #maze div.dog.right::after {
-    transform:scaleX(1);
+    transform: scaleX(1);
 }
 
 #maze div.dog.dachshund::after {
@@ -433,12 +446,12 @@ span.icon {
 
 /* arrow controls */
 .control {
-  cursor: pointer;
-  width: 70px;
-  height: 70px;
-  background: var(--greybrown);
-  display: inline-block;
-  transition: all .05s linear;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background: var(--greybrown);
+    display: inline-block;
+    transition: all .05s linear;
 }
 
 .control:active {
@@ -449,6 +462,7 @@ span.icon {
     fill: var(--beige);
     pointer-events: none;
 }
+
 /* ==========================================================================
    Footer styles
    ========================================================================== */
@@ -492,5 +506,10 @@ footer svg {
 
     .difficulty.desktop {
         display: flex;
+    }
+
+    .congratulations-images {
+        flex-direction: row;
+        align-items: flex-end;
     }
 }
