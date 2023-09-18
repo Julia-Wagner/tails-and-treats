@@ -7,7 +7,7 @@ const START_GAME_MODAL = document.getElementById("modal-start-game");
 const START_GAME_MODAL_BTN = document.getElementById("btn-start-game");
 const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
 const CONGRATULATIONS_MODAL = document.getElementById("modal-congratulations");
-const CONGRATULATIONS_MODAL_CLOSE = document.getElementById("close-congratulations");
+const CONGRATULATIONS_TEXT = document.getElementById("congratulations-text");
 const START_GAME_FORM = document.getElementById("start-game-form");
 const RELOAD = document.getElementById("reload");
 // dom elements
@@ -20,6 +20,7 @@ const BACK_NAV_BTN = document.getElementById("btn-back");
 const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 const TREATS = document.getElementById("treats");
 const TIME = document.getElementById("time");
+const HIDDEN_TREATS = document.getElementsByClassName("treat");
 // control arrows
 const CONTROL_UP = document.getElementById("up");
 const CONTROL_LEFT = document.getElementById("left");
@@ -29,6 +30,8 @@ const CONTROL_RIGHT = document.getElementById("right");
 // global variable to check if the game is active
 let isPlaying = false;
 let treatsCollected = 0;
+let treatsAvailable;
+let timePassed;
 
 // necessary to move the dog character
 // adapted from https://www.the-art-of-web.com/mazing.js
@@ -87,11 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 START_GAME_MODAL.style.display = "none";
                 START_GAME_MODAL.setAttribute('aria-hidden', 'true');
                 break;
-            // close start game modal
-            case CONGRATULATIONS_MODAL_CLOSE:
-                CONGRATULATIONS_MODAL.style.display = "none";
-                CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'true');
-                break;
             default:
                 break;
         }
@@ -126,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Maze.display("maze-container");
         // place treats inside the maze
         checkTreats();
+        treatsAvailable = HIDDEN_TREATS.length;
         // place the selected dog character
         placeDog(START_GAME_FORM.dog.value);
         startTimer();
@@ -137,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let time = Date.now() - start;
             timeFormatted = new Date(time).toISOString().substring(14, 19)
             TIME.innerText = timeFormatted;
+            timePassed = timeFormatted;
         }, 1000);
     }
 
@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // open congratulations modal
         CONGRATULATIONS_MODAL.style.display = "block";
         CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
+        CONGRATULATIONS_TEXT.innerText = "You collected " + treatsCollected + " out of " + treatsAvailable + " treats in a time of " + timePassed + "!";
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js
@@ -293,10 +294,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // add class names to the treats to use different treat images for each
     function checkTreats() {
-        let hiddenTreats = document.getElementsByClassName("treat");
         let treatClasses = ["bone", "can", "cookies", "food", "water"];
         let counter = 0;
-        for (let treat of hiddenTreats) {
+        for (let treat of HIDDEN_TREATS) {
             treat.classList.add(treatClasses[counter]);
             counter++;
             if (counter > treatClasses.length - 1) {
@@ -353,7 +353,6 @@ document.addEventListener("DOMContentLoaded", function () {
     RULES_MODAL_CLOSE.addEventListener("click", closeModal);
     START_GAME_MODAL_BTN.addEventListener("click", openModal);
     START_GAME_MODAL_CLOSE.addEventListener("click", closeModal);
-    CONGRATULATIONS_MODAL_CLOSE.addEventListener("click", closeModal);
     // game and navigation listeners
     START_GAME_FORM.addEventListener("submit", startGame);
     MENU_NAV_BTN.addEventListener("click", openMenu);
