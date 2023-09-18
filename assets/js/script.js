@@ -227,7 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // remove treat from maze if it was collected
             if (nextClass.includes("treat")) {
-                console.log("collect");
                 this.maze[nextPos].classList.remove("treat");
                 treatsCollected++;
                 TREATS.innerText = treatsCollected;
@@ -235,7 +234,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
             this.maze[dogPos].classList.remove("dog");
             this.maze[nextPos].classList.add("dog", START_GAME_FORM.dog.value);
+
+            // end the game
+            if (nextClass.includes("exit")) {
+                endGame();
+            }
         }
+    }
+
+    function endGame() {
+        isPlaying = false;
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js
