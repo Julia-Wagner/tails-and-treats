@@ -288,13 +288,13 @@ span.icon {
 }
 
 #congratulations-dog img {
-    height: 300px;
+    width: 450px;
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
 }
 
 #congratulations-bowl img {
-    max-height: 120px;
-    min-height: 100px;
+    width: 170px;
+    margin-top: 1rem;
     filter: drop-shadow(7px 7px 2px rgb(0 0 0 / 0.4));
 }
 
