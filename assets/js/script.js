@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 Maze = new MazeBuilder(14, 8);
                 break;
             case "mobile":
-                Maze = new MazeBuilder(5, 8);
+                Maze = new MazeBuilder(5, 6);
                 break;
             default:
                 break;
