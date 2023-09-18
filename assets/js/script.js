@@ -16,6 +16,7 @@ const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
 const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 const TREATS = document.getElementById("treats");
+const TIME = document.getElementById("time");
 // control arrows
 const CONTROL_UP = document.getElementById("up");
 const CONTROL_LEFT = document.getElementById("left");
@@ -119,6 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
         checkTreats();
         // place the selected dog character
         placeDog(START_GAME_FORM.dog.value);
+        startTimer();
+    }
+
+    function startTimer() {
+        let start = Date.now();
+        timerInterval = setInterval(function () {
+            let time = Date.now() - start;
+            timeFormatted = new Date(time).toISOString().substring(14, 19)
+            TIME.innerText = timeFormatted;
+        }, 1000);
     }
 
     function checkKey(e) {
@@ -244,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function endGame() {
         isPlaying = false;
+        clearInterval(timerInterval);
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js
