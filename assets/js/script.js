@@ -6,7 +6,10 @@ const RULES_MODAL_CLOSE = document.getElementById("close-rules");
 const START_GAME_MODAL = document.getElementById("modal-start-game");
 const START_GAME_MODAL_BTN = document.getElementById("btn-start-game");
 const START_GAME_MODAL_CLOSE = document.getElementById("close-start-game");
+const CONGRATULATIONS_MODAL = document.getElementById("modal-congratulations");
+const CONGRATULATIONS_MODAL_CLOSE = document.getElementById("close-congratulations");
 const START_GAME_FORM = document.getElementById("start-game-form");
+const RELOAD = document.getElementById("reload");
 // dom elements
 const MAIN = document.getElementsByTagName("main")[0];
 const BODY = document.getElementsByTagName("body")[0];
@@ -83,6 +86,11 @@ document.addEventListener("DOMContentLoaded", function () {
             case START_GAME_FORM:
                 START_GAME_MODAL.style.display = "none";
                 START_GAME_MODAL.setAttribute('aria-hidden', 'true');
+                break;
+            // close start game modal
+            case CONGRATULATIONS_MODAL_CLOSE:
+                CONGRATULATIONS_MODAL.style.display = "none";
+                CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'true');
                 break;
             default:
                 break;
@@ -256,6 +264,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function endGame() {
         isPlaying = false;
         clearInterval(timerInterval);
+        // set aria-hidden for the main content hidden behind the modal for accessibility
+        MAIN.setAttribute('aria-hidden', 'true');
+        // set overflow: hidden for the body to prevent scrolling the hidden content
+        BODY.style.overflow = "hidden";
+        // open congratulations modal
+        CONGRATULATIONS_MODAL.style.display = "block";
+        CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
     }
 
     // function adapted from https://www.the-art-of-web.com/mazing.js
@@ -338,6 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     RULES_MODAL_CLOSE.addEventListener("click", closeModal);
     START_GAME_MODAL_BTN.addEventListener("click", openModal);
     START_GAME_MODAL_CLOSE.addEventListener("click", closeModal);
+    CONGRATULATIONS_MODAL_CLOSE.addEventListener("click", closeModal);
     // game and navigation listeners
     START_GAME_FORM.addEventListener("submit", startGame);
     MENU_NAV_BTN.addEventListener("click", openMenu);
@@ -349,6 +365,4 @@ document.addEventListener("DOMContentLoaded", function () {
     CONTROL_LEFT.addEventListener("click", checkArrow);
     CONTROL_DOWN.addEventListener("click", checkArrow);
     CONTROL_RIGHT.addEventListener("click", checkArrow);
-    // show the default browser message when the page is reloaded to prevent unwanted exit of the game
-    window.onbeforeunload = function () { return ""; };
 });
