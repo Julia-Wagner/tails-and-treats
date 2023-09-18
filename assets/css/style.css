@@ -393,10 +393,16 @@ span.icon {
   height: 70px;
   background: var(--greybrown);
   display: inline-block;
+  transition: all .05s linear;
+}
+
+.control:active {
+    transform: translate(0, 3px);
 }
 
 .control svg {
     fill: var(--beige);
+    pointer-events: none;
 }
 /* ==========================================================================
    Footer styles

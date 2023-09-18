@@ -13,6 +13,10 @@ const MENU_NAV = document.getElementById("game-menu");
 const MENU_NAV_BTN = document.getElementById("btn-menu");
 const BACK_NAV_BTN = document.getElementById("btn-back");
 const MAZE_CONTAINER = document.getElementById("outer-maze-container");
+const CONTROL_UP = document.getElementById("up");
+const CONTROL_LEFT = document.getElementById("left");
+const CONTROL_DOWN = document.getElementById("down");
+const CONTROL_RIGHT = document.getElementById("right");
 
 // global variable to check if the game is active
 let isPlaying = false;
@@ -132,6 +136,33 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 // right arrow
                 case 39:
+                    moveDog("right");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    function checkArrow(e) {
+        if (!isPlaying) {
+            return;
+        } else {
+            switch (e.target.id) {
+                // up arrow
+                case "up":
+                    moveDog("up");
+                    break;
+                // down arrow
+                case "down":
+                    moveDog("down");
+                    break;
+                // left arrow
+                case "left":
+                    moveDog("left");
+                    break;
+                // right arrow
+                case "right":
                     moveDog("right");
                     break;
                 default:
@@ -266,6 +297,11 @@ document.addEventListener("DOMContentLoaded", function () {
     BACK_NAV_BTN.addEventListener("click", closeMenu);
     // key press listener
     document.onkeydown = checkKey;
+    // control errors listeners
+    CONTROL_UP.addEventListener("click", checkArrow);
+    CONTROL_LEFT.addEventListener("click", checkArrow);
+    CONTROL_DOWN.addEventListener("click", checkArrow);
+    CONTROL_RIGHT.addEventListener("click", checkArrow);
     // show the default browser message when the page is reloaded to prevent unwanted exit of the game
     window.onbeforeunload = function () { return ""; };
 });
