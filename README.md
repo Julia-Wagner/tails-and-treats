@@ -20,6 +20,7 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
     - [**Main Menu**](#main-menu)
     - [**Rules modal**](#rules-modal)
     - [**Start new game modal**](#start-new-game-modal)
+    - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
 
 ## **Planning**
@@ -115,6 +116,24 @@ I decided to use a modal to display the game rules. To ensure accessibility, I u
 One of the goals of this game is to make it customizable. That is why the user has to select a dog character and game difficulty before starting to play. To keep the page style consistent, I decided to also use a modal for the **Start new game** button. In this modal, I added a form for the user to select a dog and difficulty. There is an option pre-checked for each to ensure there is a selection made.
 
 ![Desktop start game modal](docs/screenshots/start_game_desktop.png)
+
+### **Congratulations modal**
+
+When the user reaches the exit of the maze, the game is stopped. A modal appears showing the number of treats the user collected and the time spent playing. Above the text the selected dog character is shown with a dog bowl. The bowl is filled to different levels, depending on the number of treats the user collected. If the user collected no treats, the bowl is empty.
+
+![Congratulations modal bowl empty](docs/screenshots/congratulations_empty.png)
+
+If the user collected less than half of the available treats, the bowl is half full.
+
+![Congratulations modal bowl half full](docs/screenshots/congratulations_half_full.png)
+
+If the user collected more than half of the available treats, the bowl is full.
+
+![Congratulations modal bowl half full](docs/screenshots/congratulations_full.png)
+
+And if the user collected all of the available treats, the bowl is full and overflowing with food.
+
+![Congratulations modal bowl half full](docs/screenshots/congratulations_extra_full.png)
 
 ### **Custom 404 Page**
 
