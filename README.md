@@ -117,6 +117,10 @@ One of the goals of this game is to make it customizable. That is why the user h
 
 ![Desktop start game modal](docs/screenshots/start_game_desktop.png)
 
+The mazes for bigger sized screens are horizontal. However for the mobile version of this game, I added a vertical maze to make better use of the available screen. When the screen size is smaller than 600px, only the mobile option is selectable.
+
+![Mobile start game modal](docs/screenshots/start_game_mobile.png)
+
 ### **Congratulations modal**
 
 When the user reaches the exit of the maze, the game is stopped. A modal appears showing the number of treats the user collected and the time spent playing. Above the text the selected dog character is shown with a dog bowl. The bowl is filled to different levels, depending on the number of treats the user collected. If the user collected no treats, the bowl is empty.
