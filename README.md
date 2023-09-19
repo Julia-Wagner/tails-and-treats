@@ -109,7 +109,7 @@ The menu is the default landing page for the game. From the menu, the user can e
 
 I decided to use a modal to display the game rules. To ensure accessibility, I used the `aria-hidden` attribute to describe which sections of the page are visible depending on the state of the modal.
 
-![Mobile rules modal](docs/screenshots/rules_mobile.png)
+![Mobile rules modal](docs/screenshots/rules_desktop.png)
 
 ### **Start new game modal**
 
