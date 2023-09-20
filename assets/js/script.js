@@ -11,7 +11,6 @@ const CONGRATULATIONS_TEXT = document.getElementById("congratulations-text");
 const CONGRATULATIONS_DOG = document.getElementById("congratulations-dog");
 const CONGRATULATIONS_BOWL = document.getElementById("congratulations-bowl");
 const START_GAME_FORM = document.getElementById("start-game-form");
-const RELOAD = document.getElementById("reload");
 // dom elements
 const MAIN = document.getElementsByTagName("main")[0];
 const BODY = document.getElementsByTagName("body")[0];
@@ -29,25 +28,29 @@ const CONTROL_LEFT = document.getElementById("left");
 const CONTROL_DOWN = document.getElementById("down");
 const CONTROL_RIGHT = document.getElementById("right");
 
-// global variable to check if the game is active
+// global variables needed during the whole game
 let isPlaying = false;
 let treatsCollected = 0;
 let treatsAvailable;
 let timePassed;
 let timer = false;
+let timerInterval;
 
 // necessary to move the dog character
 // adapted from https://www.the-art-of-web.com/mazing.js
 let Position = function (x, y) {
     this.x = x;
     this.y = y;
-}
+};
 Position.prototype.toString = function () {
     return this.x + ":" + this.y;
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    // open the modal given as a parameter
+    /**
+     * Open the modal according to the given event.
+     * @param {event} e 
+     */
     function openModal(e) {
         isPlaying = false;
         // set aria-hidden for the main content hidden behind the modal for accessibility
@@ -72,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // close the modal given as a parameter
+    /**
+     * Close the modal according to the given event.
+     * @param {event} e 
+     */
     function closeModal(e) {
         MAIN.setAttribute('aria-hidden', 'false');
         BODY.style.overflow = "unset";
@@ -98,7 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // start the game with the selected options from the form
+    /**
+     * Start the game with the selected options from the form.
+     * @param {event} e 
+     */
     function startGame(e) {
         if (timer) {
             clearInterval(timerInterval);
@@ -136,17 +145,25 @@ document.addEventListener("DOMContentLoaded", function () {
         startTimer();
     }
 
+    /**
+     * Start the timer and update the value every second.
+     */
     function startTimer() {
         timer = true;
         let start = Date.now();
         timerInterval = setInterval(function () {
             let time = Date.now() - start;
-            timeFormatted = new Date(time).toISOString().substring(14, 19)
+            timeFormatted = new Date(time).toISOString().substring(14, 19);
             TIME.innerText = timeFormatted;
             timePassed = timeFormatted;
         }, 1000);
     }
 
+    /**
+     * Check which key was pressed on the keyboard.
+     * Return without action if the value of isPlaying is false.
+     * @param {event} e 
+     */
     function checkKey(e) {
         if (!isPlaying) {
             return;
@@ -179,6 +196,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    /**
+     * Check which arrow button was clicked.
+     * Return without action if the value of isPlaying is false.
+     * @param {event} e 
+     */
     function checkArrow(e) {
         if (!isPlaying) {
             return;
@@ -206,13 +228,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // function adapted from https://www.the-art-of-web.com/mazing.js
+    /**
+     * Move the dog in the direction given as a parameter.
+     * Return without action if the next position is a wall.
+     * (Function adapted from https://www.the-art-of-web.com/mazing.js)
+     * @param {string} direction 
+     */
     function moveDog(direction) {
         dogPos = findDog();
         let nextPos = new Position(dogPos.x, dogPos.y);
         var dir;
 
         if (dogPos) {
+            // set the value of dir to the current value, only change it if the dog is moved to the left or right
             if (this.maze[dogPos].classList.contains("right")) {
                 dir = "right";
             } else if (this.maze[dogPos].classList.contains("left")) {
@@ -268,6 +296,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    /**
+     * The user has reached the exit.
+     * Stop the timer, open the congratulations modal.
+     */
     function endGame() {
         isPlaying = false;
         clearInterval(timerInterval);
@@ -296,7 +328,11 @@ document.addEventListener("DOMContentLoaded", function () {
         CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
     }
 
-    // function adapted from https://www.the-art-of-web.com/mazing.js
+    /**
+     * Loop through the maze and find the current position of the dog character.
+     * (Function adapted from https://www.the-art-of-web.com/mazing.js)
+     * @returns {object} dog position
+     */
     function findDog() {
         this.mazeContainer = document.getElementById("maze");
 
@@ -314,7 +350,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return this.dogPos;
     }
 
-    // add class names to the treats to use different treat images for each
+    /**
+     * Add class names to the treats to use different treat images for each.
+     */
     function checkTreats() {
         let treatClasses = ["bone", "can", "cookies", "food", "water"];
         let counter = 0;
@@ -327,13 +365,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // add dog class to the entrance div
+    /**
+     * Add the according dog as a class to the entrance div.
+     * @param {string} dog The selected value from the start game form.
+     */
     function placeDog(dog) {
         let entrance = document.getElementsByClassName("entrance")[0];
         entrance.classList.add(dog, "dog", "right");
     }
 
-    // open main menu, show back to game button and hide menu button
+    /**
+     * Open main menu, show back to game button and hide menu button.
+     */
     function openMenu() {
         isPlaying = false;
         MENU_CONTAINER.style.display = "block";
@@ -346,7 +389,9 @@ document.addEventListener("DOMContentLoaded", function () {
         MAZE_CONTAINER.setAttribute('aria-hidden', 'true');
     }
 
-    // close main menu, hide back to game button and show menu button
+    /**
+     * Close main menu, hide back to game button and show menu button.
+     */
     function closeMenu() {
         isPlaying = true;
         MENU_CONTAINER.style.display = "none";
@@ -359,6 +404,9 @@ document.addEventListener("DOMContentLoaded", function () {
         MAZE_CONTAINER.setAttribute('aria-hidden', 'false');
     }
 
+    /**
+     * Only show the mobile option in the start game form if the screen width is too small.
+     */
     function handleRadioButtons() {
         let screenWidth = window.innerWidth;
 
