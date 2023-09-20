@@ -22,6 +22,7 @@ const MAZE_CONTAINER = document.getElementById("outer-maze-container");
 const TREATS = document.getElementById("treats");
 const TIME = document.getElementById("time");
 const HIDDEN_TREATS = document.getElementsByClassName("treat");
+const SOUND_BTN = document.getElementById('sound');
 // control arrows
 const CONTROL_UP = document.getElementById("up");
 const CONTROL_LEFT = document.getElementById("left");
@@ -36,6 +37,7 @@ let timePassed;
 let timer = false;
 let timerInterval;
 // sounds
+let sound = false;
 let soundTreat = new Audio("assets/sounds/treat.mp3");
 let soundEating = new Audio("assets/sounds/eating.mp3");
 let soundPanting = new Audio("assets/sounds/panting.mp3");
@@ -119,7 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(timerInterval);
         }
         isPlaying = true;
-        soundPanting.play();
+        if (sound) {
+            soundPanting.play();
+        }
+
         e.preventDefault();
         closeModal(e);
         MENU_NAV.style.display = "flex";
@@ -288,7 +293,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // remove treat from maze if it was collected
             if (nextClass.includes("treat")) {
-                soundTreat.play();
+                if (sound) {
+                    soundTreat.play();
+                }
                 this.maze[nextPos].classList.remove("treat");
                 treatsCollected++;
                 TREATS.innerText = treatsCollected;
@@ -310,8 +317,10 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     function endGame() {
         isPlaying = false;
-        soundPanting.pause();
-        soundEating.play();
+        if (sound) {
+            soundPanting.pause();
+            soundEating.play();
+        }
         clearInterval(timerInterval);
         timer = false;
         // set aria-hidden for the main content hidden behind the modal for accessibility
@@ -427,6 +436,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function toggleSound(e) {
+        let toggle = e.target;
+        let state = toggle.getAttribute('aria-checked');
+
+        if (state === 'true') {
+            toggle.setAttribute('aria-checked', false);
+            sound = false;
+            soundPanting.pause();
+        } else {
+            toggle.setAttribute('aria-checked', true);
+            sound = true;
+            soundPanting.play();
+        }
+    }
+
     // event listeners
     // modal listeners
     RULES_MODAL_BTN.addEventListener("click", openModal);
@@ -437,6 +461,7 @@ document.addEventListener("DOMContentLoaded", function () {
     START_GAME_FORM.addEventListener("submit", startGame);
     MENU_NAV_BTN.addEventListener("click", openMenu);
     BACK_NAV_BTN.addEventListener("click", closeMenu);
+    SOUND_BTN.addEventListener("click", toggleSound);
     // key press listener
     document.onkeydown = checkKey;
     // control errors listeners

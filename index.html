@@ -25,6 +25,11 @@
 
         <!-- button for menu only visible while playing the game -->
         <nav id="game-menu" aria-hidden="true">
+            <label for="sound" class="toggle-label">Sound Effects
+                <button type="button" id="sound" role="switch" aria-checked="false">
+                    <span>on</span><span>off</span>
+                </button>
+            </label>
             <button id="btn-menu" class="btn btn-svg">Menu<span class="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
@@ -184,12 +189,16 @@
                     <p>To start the game, click on <span class="bold-text">Start new game</span> in the menu. Then you
                         will be able to choose a dog character and difficulty.</p>
                     <p>Once you chose your character and difficulty the game begins.
-                        You will move your dog around the maze <span class="bold-text">collecting treats</span>. The goal of the game is to collect as
+                        You will move your dog around the maze <span class="bold-text">collecting treats</span>. The
+                        goal of the game is to collect as
                         many treats as possible, to make your dog happy.
-                        When you exit the maze, you will see <span class="bold-text">how well you filled made the dog´s bowl</span>.</p>
-                    <p>Navigate the maze using your <span class="bold-text">keyboard controls or the buttons</span> provided underneath the maze.
+                        When you exit the maze, you will see <span class="bold-text">how well you filled made the dog´s
+                            bowl</span>.</p>
+                    <p>Navigate the maze using your <span class="bold-text">keyboard controls or the buttons</span>
+                        provided underneath the maze.
                     </p>
-                    <p>Each time you start a new game, the maze is <span class="bold-text">created randomly</span> so you will face a new challenge
+                    <p>Each time you start a new game, the maze is <span class="bold-text">created randomly</span> so
+                        you will face a new challenge
                         each time you play.</p>
                 </div>
                 <div class="screenreader-info" id="modal-rules-description">

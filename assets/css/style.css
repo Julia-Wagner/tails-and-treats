@@ -157,6 +157,9 @@ header nav {
 
 #game-menu {
     display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* ==========================================================================
@@ -277,6 +280,45 @@ span.icon {
 .difficulty.desktop {
     display: none;
 }
+
+/* sound toggle switch */
+.toggle-label {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+/* start code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
+
+[role="switch"] {  
+    padding: 0;
+    width: 5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 2rem;
+    background-color: var(--black);
+  }
+  
+  [role="switch"][aria-checked="true"] {
+    background-color: var(--blue);
+  }
+  
+  [role="switch"] span {
+    color: var(--grey);
+    padding: 0.3rem;  
+    pointer-events: none;
+    border-radius: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  
+  [role="switch"][aria-checked="false"] :last-child {
+    padding-left: 0.5rem;
+  }
+  
+  [role="switch"][aria-checked="true"] :last-child,[role="switch"][aria-checked="false"] :first-child {
+    background: var(--grey);
+  }
+/* end code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
 
 /* congratulations modal */
 .congratulations-images {
@@ -512,5 +554,14 @@ footer svg {
     .congratulations-images {
         flex-direction: row;
         align-items: flex-end;
+    }
+
+    #game-menu {
+        flex-direction: row;
+    }
+
+    .toggle-label {
+        margin-left: 1rem;
+        margin-bottom: 0;
     }
 }
