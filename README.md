@@ -20,6 +20,7 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
     - [**Main Menu**](#main-menu)
     - [**Rules modal**](#rules-modal)
     - [**Start new game modal**](#start-new-game-modal)
+    - [**Maze**](#maze)
     - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
 
@@ -117,13 +118,29 @@ One of the goals of this game is to make it customizable. That is why the user h
 
 ![Desktop start game modal](docs/screenshots/start_game_desktop.png)
 
-The mazes for bigger sized screens are horizontal. However for the mobile version of this game, I added a vertical maze to make better use of the available screen. When the screen size is smaller than 600px, only the mobile option is selectable.
+The mazes for bigger-sized screens are horizontal. However, for the mobile version of this game, I added a vertical maze to make better use of the available screen. When the screen size is smaller than 600px, only the mobile option is selectable.
 
 ![Mobile start game modal](docs/screenshots/start_game_mobile.png)
 
+### **Maze**
+
+After looking at different ways of creating a maze in JavaScript, I decided to use the [Playable Maze Game Generator](https://www.the-art-of-web.com/javascript/playable-maze-generator/) as my main resource. I had a look at how to implement a randomly generated maze from many different resources. But this seemed like the best option to me and I liked being able to just use the *MazeBuilder* class to build my maze and carry on doing the other things myself. So I used the *maze-builder.js* file and adapted it to the needs of my maze. There were many functions in the tutorial that I did not need so I deleted them.
+
+In terms of styling, I decided to keep it simple with a white background and dark-brown walls as the colorful treats and the dog character make the maze busy enough. To indicate the exit of the maze, a bag of treats is placed above the opening.
+
+![Desktop maze](docs/screenshots/maze_start.png)
+
+While navigating through the maze, the image of the dog character is flipped so the dog´s head faces the right direction. Under the maze, the number of collected treats as well as a timer are displayed. In the [Wireframes](#wireframes) section, I described that I would use control buttons for the mobile version of the game. However, I decided to display the arrow controls for all screen sizes. That is because there is no way for me to know whether the user has a keyboard or not, as a tablet might be the same size as a smaller laptop.
+
+![Desktop maze](docs/screenshots/maze_playing.png)
+
+As described above, the mobile maze is vertical to make better use of the available screen.
+
+![Mobile maze](docs/screenshots/maze_mobile.png)
+
 ### **Congratulations modal**
 
-When the user reaches the exit of the maze, the game is stopped. A modal appears showing the number of treats the user collected and the time spent playing. Above the text the selected dog character is shown with a dog bowl. The bowl is filled to different levels, depending on the number of treats the user collected. If the user collected no treats, the bowl is empty.
+When the user reaches the exit of the maze, the game is stopped. A modal appears showing the number of treats the user collected and the time spent playing. Above the text, the selected dog character is shown with a dog bowl. The bowl is filled to different levels, depending on the number of treats the user collected. If the user collected no treats, the bowl is empty.
 
 ![Congratulations modal bowl empty](docs/screenshots/congratulations_empty.png)
 

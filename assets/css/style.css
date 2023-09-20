@@ -307,9 +307,8 @@ span.icon {
     display: none;
 }
 
-/* start of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 #maze-container {
-    margin: 3rem auto 1rem auto;
+    margin: 1rem auto;
     width: 100%;
 }
 
@@ -342,8 +341,6 @@ span.icon {
 #maze div div.treat.wall {
     background-color: var(--greybrown);
 }
-
-/* end of code adapted from https://www.the-art-of-web.com/javascript/maze-generator/ */
 
 /* exit */
 #maze div div.door.exit::after {

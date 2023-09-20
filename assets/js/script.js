@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let start = Date.now();
         timerInterval = setInterval(function () {
             let time = Date.now() - start;
-            timeFormatted = new Date(time).toISOString().substring(14, 19);
+            let timeFormatted = new Date(time).toISOString().substring(14, 19);
             TIME.innerText = timeFormatted;
             timePassed = timeFormatted;
         }, 1000);
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * @param {string} direction 
      */
     function moveDog(direction) {
-        dogPos = findDog();
+        let dogPos = findDog();
         let nextPos = new Position(dogPos.x, dogPos.y);
         var dir;
 
@@ -336,8 +336,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function findDog() {
         this.mazeContainer = document.getElementById("maze");
 
-        for (i = 0; i < this.mazeContainer.children.length; i++) {
-            for (j = 0; j < this.mazeContainer.children[i].children.length; j++) {
+        for (let i = 0; i < this.mazeContainer.children.length; i++) {
+            for (let j = 0; j < this.mazeContainer.children[i].children.length; j++) {
                 let el = this.mazeContainer.children[i].children[j];
                 this.maze[new Position(i, j)] = el;
                 if (el.classList.contains("dog")) {
