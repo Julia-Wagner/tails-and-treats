@@ -35,6 +35,12 @@ let treatsAvailable;
 let timePassed;
 let timer = false;
 let timerInterval;
+// sounds
+let soundTreat = new Audio("assets/sounds/treat.mp3");
+let soundEating = new Audio("assets/sounds/eating.mp3");
+let soundPanting = new Audio("assets/sounds/panting.mp3");
+soundEating.loop = true;
+soundPanting.loop = true;
 
 // necessary to move the dog character
 // adapted from https://www.the-art-of-web.com/mazing.js
@@ -113,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(timerInterval);
         }
         isPlaying = true;
+        soundPanting.play();
         e.preventDefault();
         closeModal(e);
         MENU_NAV.style.display = "flex";
@@ -281,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // remove treat from maze if it was collected
             if (nextClass.includes("treat")) {
+                soundTreat.play();
                 this.maze[nextPos].classList.remove("treat");
                 treatsCollected++;
                 TREATS.innerText = treatsCollected;
@@ -302,6 +310,8 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     function endGame() {
         isPlaying = false;
+        soundPanting.pause();
+        soundEating.play();
         clearInterval(timerInterval);
         timer = false;
         // set aria-hidden for the main content hidden behind the modal for accessibility
