@@ -23,6 +23,7 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
     - [**Maze**](#maze)
     - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
+  - [**Deployment**](#deployment)
 
 ## **Planning**
 
@@ -161,3 +162,14 @@ And if the user collected all of the available treats, the bowl is full and over
 I added a custom 404 page to direct the user to a customized error page that is consistent with the website style. The button is linked to the main menu.
 
 ![404 Page](docs/screenshots/404_mobile.png)
+
+## **Deployment**
+
+To be able to use Lighthouse testing right away, I deployed my website after implementing the header and footer. The steps to deploying a website on GitHub pages are:
+
+1. Open the [repository](https://github.com/Julia-Wagner/tails-and-treats) and go to the **Settings** tab.
+2. Navigate to the **Pages** tab in the left menu.
+3. Choose **Deploy from a branch** and select the according branch, *main* in my case.
+4. Click save. The link to the deployed website can then be found in the [repository](https://github.com/Julia-Wagner/tails-and-treats) on the right menu under **Environments**.
+
+The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https://julia-wagner.github.io/tails-and-treats/)
