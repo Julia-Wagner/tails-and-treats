@@ -24,6 +24,9 @@ Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
     - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
   - [**Deployment**](#deployment)
+  - [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media and Design**](#media-and-design)
 
 ## **Planning**
 
@@ -173,3 +176,23 @@ To be able to use Lighthouse testing right away, I deployed my website after imp
 4. Click save. The link to the deployed website can then be found in the [repository](https://github.com/Julia-Wagner/tails-and-treats) on the right menu under **Environments**.
 
 The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https://julia-wagner.github.io/tails-and-treats/)
+
+## **Credits**
+
+Thanks to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) for giving me valuable feedback and tips during this project. And to my Code Institute Facilitator [Kay Welfare](https://github.com/Kathrin-ddggxh) for testing the game and making new suggestions.
+
+### **Content**
+
+- I adapted the code to create my maze from the [Playable Maze Game Generator](https://www.the-art-of-web.com/javascript/playable-maze-generator/).
+- To test my website I signed up for a free trial on [BrowserStack](https://www.browserstack.com/).
+- To test accessibility on my website I used to [WAVE Tool](https://wave.webaim.org/).
+
+### **Media and Design**
+
+- The playground image, dog characters and treats are from [Shutterstock](https://www.shutterstock.com/).
+- The other icons were embedded from [iconmonstr](https://iconmonstr.com/).
+- I used [Balsamiq](https://balsamiq.com/) to create Wireframes.
+- With [coolors.co](https://coolors.co/) I created a color scheme and used [contrast-grid.eightshapes.com](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%2383a603%0D%0A%231b4001%0D%0A%23f0deb4%0D%0A%23f6f7eb%0D%0A%23001e1d&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check the contrast and possible color combinations.
+- The fonts are imported from [Google Fonts](https://fonts.google.com/).
+- The screenshot at the top of this document was taken from [Am I Responsive?](https://ui.dev/amiresponsive?url=https://julia-wagner.github.io/tails-and-treats/).
+  
