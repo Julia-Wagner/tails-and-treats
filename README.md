@@ -93,7 +93,9 @@ I also looked for icons I could use as treats to scatter throughout the maze.
 
 ![Desktop header](docs/screenshots/header_desktop.png)
 
-The header contains a heading, subheading and navigation. The navigation is hidden when the user first opens the website. It contains two elements, but only shows one at a time, if any. Once the user starts the game, the header navigation shows a button to open the menu. When the menu is open, after a game has been started, the navigation shows a button to go back to the game. If no game has been started yet, the navigation is hidden.
+The header contains a heading, subheading and navigation. The navigation is hidden when the user first opens the website. Once the user starts the game, the header navigation shows a button to open the menu. When the menu is open, after a game has been started, the navigation shows a button to go back to the game. If no game has been started yet, the navigation is hidden.
+
+The navigation also contains a toggle switch to turn the sound effects of the game on and off. The accessible toggle button was adapted from [ErikKroes.nl](https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/). By default, it is turned off and no sounds are playing.
 
 ![Mobile header](docs/screenshots/header_mobile.png)
 
@@ -132,6 +134,8 @@ After looking at different ways of creating a maze in JavaScript, I decided to u
 
 In terms of styling, I decided to keep it simple with a white background and dark-brown walls as the colorful treats and the dog character make the maze busy enough. To indicate the exit of the maze, a bag of treats is placed above the opening.
 
+If sound effects are turned on, there is an audio of a dog panting playing while the game is running. When the dog collects a treat, there is the sound of a dog eating a treat playing.
+
 ![Desktop maze](docs/screenshots/maze_start.png)
 
 While navigating through the maze, the image of the dog character is flipped so the dog´s head faces the right direction. Under the maze, the number of collected treats as well as a timer are displayed. In the [Wireframes](#wireframes) section, I described that I would use control buttons for the mobile version of the game. However, I decided to display the arrow controls for all screen sizes. That is because there is no way for me to know whether the user has a keyboard or not, as a tablet might be the same size as a smaller laptop.
@@ -145,6 +149,8 @@ As described above, the mobile maze is vertical to make better use of the availa
 ### **Congratulations modal**
 
 When the user reaches the exit of the maze, the game is stopped. A modal appears showing the number of treats the user collected and the time spent playing. Above the text, the selected dog character is shown with a dog bowl. The bowl is filled to different levels, depending on the number of treats the user collected. If the user collected no treats, the bowl is empty.
+
+If sound effects are turned on, there is an audio of a dog eating playing.
 
 ![Congratulations modal bowl empty](docs/screenshots/congratulations_empty.png)
 
@@ -184,6 +190,7 @@ Thanks to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) 
 ### **Content**
 
 - I adapted the code to create my maze from the [Playable Maze Game Generator](https://www.the-art-of-web.com/javascript/playable-maze-generator/).
+- The accessible sound toggle button was adapted from [ErikKroes.nl](https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/).
 - To test my website I signed up for a free trial on [BrowserStack](https://www.browserstack.com/).
 - To test accessibility on my website I used to [WAVE Tool](https://wave.webaim.org/).
 
