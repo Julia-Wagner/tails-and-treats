@@ -70,6 +70,7 @@ fieldset {
 
 .bigger-heading {
     font-size: 2rem;
+    font-family: 'Shrikhand', sans-serif;
 }
 
 .cta-btn {
@@ -123,6 +124,10 @@ fieldset {
 
 .mt-2 {
     margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
 }
 
 button span {
@@ -287,37 +292,40 @@ span.icon {
     font-size: 1rem;
     font-weight: 600;
 }
+
 /* start code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
 
-[role="switch"] {  
+[role="switch"] {
     padding: 0;
     width: 5rem;
     height: 2.5rem;
     border: 0;
     border-radius: 2rem;
     background-color: var(--black);
-  }
-  
-  [role="switch"][aria-checked="true"] {
+}
+
+[role="switch"][aria-checked="true"] {
     background-color: var(--blue);
-  }
-  
-  [role="switch"] span {
+}
+
+[role="switch"] span {
     color: var(--grey);
-    padding: 0.3rem;  
+    padding: 0.3rem;
     pointer-events: none;
     border-radius: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-  }
-  
-  [role="switch"][aria-checked="false"] :last-child {
+}
+
+[role="switch"][aria-checked="false"] :last-child {
     padding-left: 0.5rem;
-  }
-  
-  [role="switch"][aria-checked="true"] :last-child,[role="switch"][aria-checked="false"] :first-child {
+}
+
+[role="switch"][aria-checked="true"] :last-child,
+[role="switch"][aria-checked="false"] :first-child {
     background: var(--grey);
-  }
+}
+
 /* end code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
 
 /* congratulations modal */
@@ -342,6 +350,38 @@ span.icon {
 
 #congratulations-text {
     font-size: 1.5rem;
+}
+
+/* highscore table */
+#highscore {
+    margin: 3rem auto;
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid var(--black);
+}
+
+#highscore th {
+    padding: 0.5rem;
+}
+
+#highscore tr.table-heading {
+    border-bottom: 1px solid var(--black);
+    background-color: var(--yellow);
+    padding: 0.5rem;
+}
+
+#highscore td {
+    padding: 0.5rem;
+}
+
+#highscore tr {
+    display: flex;
+    flex-direction: column;
+}
+
+#highscore tr.current-attempt {
+    background-color: var(--beige);
+    font-weight: 600;
 }
 
 /* maze */
@@ -563,5 +603,9 @@ footer svg {
     .toggle-label {
         margin-left: 1rem;
         margin-bottom: 0;
+    }
+
+    #highscore tr {
+        display: table-row;
     }
 }
