@@ -28,6 +28,9 @@ const CONTROL_UP = document.getElementById("up");
 const CONTROL_LEFT = document.getElementById("left");
 const CONTROL_DOWN = document.getElementById("down");
 const CONTROL_RIGHT = document.getElementById("right");
+// highscore table
+const TABLE = document.getElementById("highscore");
+const TABLE_BODY = TABLE.getElementsByTagName("tbody")[0];
 
 // global variables needed during the whole game
 let isPlaying = false;
@@ -331,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
         BODY.style.overflow = "hidden";
         // calculate and display the score
         let score = calculateScore();
-        updateHighscore();
+        updateHighscore(score);
         // open congratulations modal
         CONGRATULATIONS_MODAL.style.display = "block";
         CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
@@ -352,31 +355,75 @@ document.addEventListener("DOMContentLoaded", function () {
         CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
     }
 
+    /**
+     * Calculate the score of the current attempt.
+     * @returns {number} score
+     */
     function calculateScore() {
         let treatsWeight = 0.6;
         let timeWeight = 0.4;
 
-        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (seconds * timeWeight);
-        return  Math.round(score * 10);
+        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (1 / seconds) * timeWeight;
+        return  Math.round(score * 100);
     }
 
-    function updateHighscore() {
-        let currentHighscoreData = {
-            dog: START_GAME_FORM.dog.value,
-            difficulty: START_GAME_FORM.difficulty.value,
-            time: timePassed
-        };
+    /**
+     * Save the current highscore values to localStorage.
+     * Display the highscore in the modal. 
+     * @param {number} score 
+     */
+    function updateHighscore(score) {
+        let highscoreData = [];
+        let timestamp = new Date().getTime();
+        let currentAttempt;
 
         let storedHighscoreData = localStorage.getItem("highscoreData");
 
-        if (storedHighscoreData !== null) {
-            let parsedHighscoreData = JSON.parse(storedHighscoreData);
-            console.log(parsedHighscoreData);
-        } else {
-            localStorage.setItem("highscoreData", JSON.stringify(currentHighscoreData));
+        if (storedHighscoreData) {
+            highscoreData = JSON.parse(storedHighscoreData);
+        } 
+
+        highscoreData.push({
+            dog: START_GAME_FORM.dog.value,
+            difficulty: START_GAME_FORM.difficulty.value,
+            score: score,
+            timestamp: timestamp
+        });
+
+        highscoreData.sort(function(a, b) {
+            return b.score - a.score;
+        });
+
+        if (highscoreData.length > 10) {
+            highscoreData.pop();
         }
 
-        console.log(localStorage);
+        for (let i = 0; i < highscoreData.length; i++) {
+            let newRow = TABLE_BODY.insertRow(TABLE_BODY.rows.length);
+            let posCell = newRow.insertCell(0);
+            let dogCell = newRow.insertCell(1);
+            let difficultyCell = newRow.insertCell(2);
+            let scoreCell = newRow.insertCell(3);
+
+            if(highscoreData[i].dog === "retriever") {
+                highscoreData[i].dog = "golden Retriever";
+            }
+          
+            posCell.innerText = i + 1 + ".";
+            dogCell.innerText = highscoreData[i].dog.charAt(0).toUpperCase() + highscoreData[i].dog.slice(1);
+            difficultyCell.innerText = highscoreData[i].difficulty.charAt(0).toUpperCase() + highscoreData[i].difficulty.slice(1);
+            scoreCell.innerText = highscoreData[i].score;
+
+            if (highscoreData[i].timestamp === timestamp) {
+                currentAttempt = newRow;
+            }
+        }
+
+        if(currentAttempt) {
+            currentAttempt.classList.add("current-attempt");
+        }
+
+        localStorage.setItem("highscoreData", JSON.stringify(highscoreData));
     }
 
     /**
@@ -468,6 +515,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    /**
+     * Turn the sound of the game on and off.
+     * @param {event} e 
+     */
     function toggleSound(e) {
         let toggle = e.target;
         let state = toggle.getAttribute('aria-checked');
