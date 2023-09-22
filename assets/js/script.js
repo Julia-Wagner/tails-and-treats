@@ -345,6 +345,26 @@ document.addEventListener("DOMContentLoaded", function () {
             bowl = "half_full";
         }
         CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
+        updateHighscore();
+    }
+
+    function updateHighscore() {
+        let currentHighscoreData = {
+            dog: START_GAME_FORM.dog.value,
+            difficulty: START_GAME_FORM.difficulty.value,
+            time: timePassed
+        };
+
+        let storedHighscoreData = localStorage.getItem("highscoreData");
+
+        if (storedHighscoreData !== null) {
+            let parsedHighscoreData = JSON.parse(storedHighscoreData);
+            console.log(parsedHighscoreData);
+        } else {
+            localStorage.setItem("highscoreData", JSON.stringify(currentHighscoreData));
+        }
+
+        console.log(localStorage);
     }
 
     /**
