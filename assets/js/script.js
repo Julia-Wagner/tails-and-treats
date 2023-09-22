@@ -329,10 +329,13 @@ document.addEventListener("DOMContentLoaded", function () {
         MAIN.setAttribute('aria-hidden', 'true');
         // set overflow: hidden for the body to prevent scrolling the hidden content
         BODY.style.overflow = "hidden";
+        // calculate and display the score
+        let score = calculateScore();
+        updateHighscore();
         // open congratulations modal
         CONGRATULATIONS_MODAL.style.display = "block";
         CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'false');
-        CONGRATULATIONS_TEXT.innerText = "You collected " + treatsCollected + " out of " + treatsAvailable + " treats in a time of " + timePassed + "!";
+        CONGRATULATIONS_TEXT.innerText = "You collected " + treatsCollected + " out of " + treatsAvailable + " treats in a time of " + timePassed + "\nThis equals a score of " + score + "!";
         CONGRATULATIONS_DOG.innerHTML = '<img src="assets/images/character_' + START_GAME_FORM.dog.value + '.svg" alt="animated image of a ' + START_GAME_FORM.dog.value + '">';
         // calculate treat amount
         let bowl;
@@ -347,22 +350,14 @@ document.addEventListener("DOMContentLoaded", function () {
             bowl = "half_full";
         }
         CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
-        let score = calculateScore();
-        console.log(score);
-        updateHighscore();
     }
 
     function calculateScore() {
-        let treatsWeight = 0.5;
-        let timeWeight = 0.3;
-        let difficultyWeights = {
-            easy: 1,
-            medium: 1.5,
-            hard: 2
-        };
+        let treatsWeight = 0.6;
+        let timeWeight = 0.4;
 
-        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (seconds * timeWeight) + (difficultyWeights[START_GAME_FORM.difficulty.value]);
-        return score * 10;
+        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (seconds * timeWeight);
+        return  Math.round(score * 10);
     }
 
     function updateHighscore() {
