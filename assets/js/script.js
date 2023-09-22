@@ -254,7 +254,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function moveDog(direction) {
         let dogPos = findDog();
         let nextPos = new Position(dogPos.x, dogPos.y);
-        var dir;
+        let dir;
+        let nextClass;
 
         if (dogPos) {
             // set the value of dir to the current value, only change it if the dog is moved to the left or right
@@ -283,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         if (this.maze[nextPos]) {
-            var nextClass = this.maze[nextPos].className;
+            nextClass = this.maze[nextPos].className;
             if (nextClass == "wall") {
                 return;
             }
