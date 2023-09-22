@@ -34,6 +34,7 @@ let isPlaying = false;
 let treatsCollected = 0;
 let treatsAvailable;
 let timePassed;
+let seconds;
 let timer = false;
 let timerInterval;
 // sounds
@@ -168,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let timeFormatted = new Date(time).toISOString().substring(14, 19);
             TIME.innerText = timeFormatted;
             timePassed = timeFormatted;
+            seconds = Math.round(time / 1000);
         }, 1000);
     }
 
@@ -345,7 +347,22 @@ document.addEventListener("DOMContentLoaded", function () {
             bowl = "half_full";
         }
         CONGRATULATIONS_BOWL.innerHTML = '<img src="assets/images/bowl_' + bowl + '.svg" alt="animated image of a dog bowl">';
+        let score = calculateScore();
+        console.log(score);
         updateHighscore();
+    }
+
+    function calculateScore() {
+        let treatsWeight = 0.5;
+        let timeWeight = 0.3;
+        let difficultyWeights = {
+            easy: 1,
+            medium: 1.5,
+            hard: 2
+        };
+
+        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (seconds * timeWeight) + (difficultyWeights[START_GAME_FORM.difficulty.value]);
+        return score * 10;
     }
 
     function updateHighscore() {
