@@ -294,7 +294,6 @@ span.icon {
 }
 
 /* start code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
-
 [role="switch"] {
     padding: 0;
     width: 5rem;
@@ -302,6 +301,7 @@ span.icon {
     border: 0;
     border-radius: 2rem;
     background-color: var(--black);
+    margin-left: 0.5rem;
 }
 
 [role="switch"][aria-checked="true"] {
@@ -315,6 +315,7 @@ span.icon {
     border-radius: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    font-weight: 600;
 }
 
 [role="switch"][aria-checked="false"] :last-child {
@@ -325,7 +326,6 @@ span.icon {
 [role="switch"][aria-checked="false"] :first-child {
     background-color: var(--grey);
 }
-
 /* end code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
 
 /* congratulations modal */
@@ -379,7 +379,7 @@ span.icon {
 
 #highscore tr {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     border-bottom: 1px solid var(--black);
 }
 
