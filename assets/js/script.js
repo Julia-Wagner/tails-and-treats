@@ -31,6 +31,7 @@ const CONTROL_RIGHT = document.getElementById("right");
 // highscore table
 const TABLE = document.getElementById("highscore");
 const TABLE_BODY = TABLE.getElementsByTagName("tbody")[0];
+const RESET_HIGHSCORE = document.getElementById("reset-highscore");
 
 // global variables needed during the whole game
 let isPlaying = false;
@@ -427,6 +428,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("highscoreData", JSON.stringify(highscoreData));
     }
 
+    function resetHighscore() {
+        localStorage.clear();
+        TABLE_BODY.innerHTML = "";
+    }
+
     /**
      * Loop through the maze and find the current position of the dog character.
      * (Function adapted from https://www.the-art-of-web.com/mazing.js)
@@ -548,9 +554,11 @@ document.addEventListener("DOMContentLoaded", function () {
     SOUND_BTN.addEventListener("click", toggleSound);
     // key press listener
     document.onkeydown = checkKey;
-    // control errors listeners
+    // control arrows listeners
     CONTROL_UP.addEventListener("click", checkArrow);
     CONTROL_LEFT.addEventListener("click", checkArrow);
     CONTROL_DOWN.addEventListener("click", checkArrow);
     CONTROL_RIGHT.addEventListener("click", checkArrow);
+    // reset
+    RESET_HIGHSCORE.addEventListener("click", resetHighscore);
 });

@@ -76,7 +76,7 @@ fieldset {
 .cta-btn {
     text-decoration: none;
     border: 2px solid var(--blue);
-    background: var(--blue);
+    background-color: var(--blue);
     color: var(--beige);
     display: inline-block;
     border-radius: 2rem;
@@ -90,7 +90,7 @@ fieldset {
 }
 
 .cta-btn:hover {
-    background: var(--beige);
+    background-color: var(--beige);
     color: var(--blue);
 }
 
@@ -143,7 +143,7 @@ button span {
    Header styles
    ========================================================================== */
 header {
-    background: var(--grey);
+    background-color: var(--grey);
     padding: 2rem 0.5rem;
     border-bottom: 2px solid var(--black);
 }
@@ -173,12 +173,12 @@ header nav {
 main {
     padding: 2rem;
     flex-grow: 1;
-    background: var(--grey);
+    background-color: var(--grey);
 }
 
 .menu-btn {
     border: 2px solid var(--greybrown);
-    background: var(--greybrown);
+    background-color: var(--greybrown);
     color: var(--beige);
     padding: 2rem 3rem;
     font-weight: bold;
@@ -189,7 +189,7 @@ main {
 }
 
 .menu-btn:hover {
-    background: var(--beige);
+    background-color: var(--beige);
     color: var(--greybrown);
 }
 
@@ -209,15 +209,15 @@ nav#main-menu {
     height: 100%;
     overflow: auto;
     /* fallback */
-    background: var(--black);
-    background: rgba(49, 42, 40, .9);
+    background-color: var(--black);
+    background-color: rgba(49, 42, 40, .9);
 }
 
 .modal-content {
     margin: 10% auto;
     padding: 1rem 2rem 2rem 2rem;
     border: 1px solid var(--black);
-    background: var(--grey);
+    background-color: var(--grey);
     color: var(--black);
     width: 80%;
     display: flex;
@@ -323,7 +323,7 @@ span.icon {
 
 [role="switch"][aria-checked="true"] :last-child,
 [role="switch"][aria-checked="false"] :first-child {
-    background: var(--grey);
+    background-color: var(--grey);
 }
 
 /* end code adapted from https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/ */
@@ -354,7 +354,7 @@ span.icon {
 
 /* highscore table */
 #highscore {
-    margin: 3rem auto;
+    margin: 3rem auto 2rem auto;
     width: 90%;
     border-collapse: collapse;
     border: 1px solid var(--black);
@@ -365,7 +365,6 @@ span.icon {
 }
 
 #highscore tr.table-heading {
-    border-bottom: 1px solid var(--black);
     background-color: var(--yellow);
     padding: 0.5rem;
 }
@@ -374,14 +373,37 @@ span.icon {
     padding: 0.5rem;
 }
 
+#highscore td:last-child {
+    font-weight: 600;
+}
+
 #highscore tr {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+    border-bottom: 1px solid var(--black);
 }
 
 #highscore tr.current-attempt {
     background-color: var(--beige);
     font-weight: 600;
+}
+
+.reset-btn {
+    display: block;
+    text-decoration: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    max-width: 200px;
+    width: 100%;
+    margin: 0.5rem auto;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: var(--black);
+    color: var(--grey);
 }
 
 /* maze */
@@ -395,7 +417,7 @@ span.icon {
 }
 
 #maze {
-    background: #ffffff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -532,7 +554,7 @@ span.icon {
     cursor: pointer;
     width: 70px;
     height: 70px;
-    background: var(--greybrown);
+    background-color: var(--greybrown);
     display: inline-block;
     transition: all .05s linear;
 }
@@ -550,7 +572,7 @@ span.icon {
    Footer styles
    ========================================================================== */
 footer {
-    background: var(--black);
+    background-color: var(--black);
     color: var(--beige);
     text-align: center;
     padding-top: 1rem;
