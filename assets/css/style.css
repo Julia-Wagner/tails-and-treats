@@ -120,6 +120,7 @@ fieldset {
 
 .screenreader-info {
     visibility: hidden;
+    font-size: 0.5rem;
 }
 
 .mt-2 {
@@ -214,7 +215,7 @@ nav#main-menu {
 }
 
 .modal-content {
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 1rem 2rem 2rem 2rem;
     border: 1px solid var(--black);
     background-color: var(--grey);
