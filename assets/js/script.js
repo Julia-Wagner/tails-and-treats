@@ -32,6 +32,7 @@ const CONTROL_RIGHT = document.getElementById("right");
 const TABLE = document.getElementById("highscore");
 const TABLE_BODY = TABLE.getElementsByTagName("tbody")[0];
 const RESET_HIGHSCORE = document.getElementById("reset-highscore");
+const RESTART = document.getElementById("restart");
 
 // global variables needed during the whole game
 let isPlaying = false;
@@ -428,9 +429,16 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("highscoreData", JSON.stringify(highscoreData));
     }
 
+    /**
+     * Delete the highscore information in localStorage and empty the table.
+     */
     function resetHighscore() {
         localStorage.clear();
         TABLE_BODY.innerHTML = "";
+    }
+
+    function restartGame() {
+        window.location.href = "/";
     }
 
     /**
@@ -559,6 +567,7 @@ document.addEventListener("DOMContentLoaded", function () {
     CONTROL_LEFT.addEventListener("click", checkArrow);
     CONTROL_DOWN.addEventListener("click", checkArrow);
     CONTROL_RIGHT.addEventListener("click", checkArrow);
-    // reset
+    // reset and restart
     RESET_HIGHSCORE.addEventListener("click", resetHighscore);
+    RESTART.addEventListener("click", restartGame);
 });
