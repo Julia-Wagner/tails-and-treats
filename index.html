@@ -24,7 +24,7 @@
         <h2>A Canine Maze Adventure</h2>
 
         <!-- button for menu only visible while playing the game -->
-        <nav id="game-menu" aria-hidden="true">
+        <nav id="game-menu" aria-hidden="true" aria-label="in-game navigation">
             <label for="sound" class="toggle-label">Sound Effects
                 <button type="button" name="sound" id="sound" role="switch" aria-checked="false">
                     <span>on</span><span>off</span>
@@ -51,7 +51,7 @@
     <!-- Main content -->
     <main aria-hidden="false">
         <div id="menu-container" class="container">
-            <nav id="main-menu">
+            <nav id="main-menu" aria-label="start game navigation">
                 <button id="btn-start-game" class="btn menu-btn">Start new game</button>
                 <button id="btn-rules" class="btn menu-btn">Rules</button>
             </nav>
@@ -117,7 +117,7 @@
         </div>
 
         <!-- start game modal content -->
-        <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description">
+        <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description" aria-label="start game modal">
             <div class="modal-content">
                 <button id="close-start-game" class="close btn">Close <span class="icon">&times;</span></button>
                 <div class="modal-text">
@@ -194,7 +194,7 @@
         </aside>
 
         <!-- rules modal content -->
-        <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description">
+        <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description" aria-label="rules modal">
             <div class="modal-content">
                 <button id="close-rules" class="close btn">Close <span class="icon">&times;</span></button>
                 <div class="modal-text">
@@ -226,8 +226,7 @@
         </aside>
 
         <!-- congratulations modal content -->
-        <aside aria-hidden="true" id="modal-congratulations" class="modal"
-            aria-describedby="modal-congratulations-description">
+        <aside aria-hidden="true" id="modal-congratulations" class="modal" aria-describedby="modal-congratulations-description" aria-label="congratulations modal">
             <div class="modal-content">
                 <div class="modal-text">
                     <h3 class="bigger-heading mt-2">Woof, woof!</h3>
