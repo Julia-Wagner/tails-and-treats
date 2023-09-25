@@ -119,7 +119,7 @@ fieldset {
 }
 
 .screenreader-info {
-    display: none;
+    visibility: hidden;
 }
 
 .mt-2 {
