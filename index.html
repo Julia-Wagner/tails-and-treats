@@ -31,15 +31,20 @@
                 </button>
             </label>
             <button id="btn-menu" class="btn btn-svg">Menu<span class="svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <svg role="img" aria-describedby="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <title id="icon-menu">menu icon to open the menu</title>
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
                     </svg></span></button>
             <button id="btn-back" class="btn btn-svg">Back to the game<span class="svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <svg role="img" aria-describedby="icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <title id="icon-close">close icon to close the menu</title>
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z" />
-                    </svg></span></button>
+                    </svg>
+                </span></button>
         </nav>
     </header>
 
@@ -58,13 +63,17 @@
         <div aria-hidden="true" id="outer-maze-container" class="container">
             <div id="maze-container"></div>
             <div class="progress">
-                <div class="progress-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <div class="progress-icon"><svg role="img" aria-describedby="icon-star"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title id="icon-star">star icon</title>
                         <path
                             d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
                     </svg>
                     <span id="treats" class="progress-text bold-text">0</span>
                 </div>
-                <div class="progress-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <div class="progress-icon"><svg role="img" aria-describedby="icon-clock"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title id="icon-clock">clock icon</title>
                         <path
                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-8v-9h2v7h6v2z" />
                     </svg>
@@ -72,30 +81,34 @@
                 </div>
             </div>
             <div class="controls">
-                <div id="up" class="control control-up"><svg clip-rule="evenodd" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                <div id="up" class="control control-up"><svg role="img" aria-describedby="arrow-up" clip-rule="evenodd"
+                        fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
+                        <title id="arrow-left">arrow pointing up to move the dog up</title>
                         <path
                             d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z"
                             fill-rule="nonzero" />
                     </svg></div><br>
-                <div id="left" class="control control-left"><svg clip-rule="evenodd" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                <div id="left" class="control control-left"><svg role="img" aria-describedby="arrow-left"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title id="arrow-left">arrow pointing left to move the dog to the left</title>
                         <path
                             d="m10.978 14.999v3.251c0 .412-.335.75-.752.75-.188 0-.375-.071-.518-.206-1.775-1.685-4.945-4.692-6.396-6.069-.2-.189-.312-.452-.312-.725 0-.274.112-.536.312-.725 1.451-1.377 4.621-4.385 6.396-6.068.143-.136.33-.207.518-.207.417 0 .752.337.752.75v3.251h9.02c.531 0 1.002.47 1.002 1v3.998c0 .53-.471 1-1.002 1z"
                             fill-rule="nonzero" />
                     </svg></div>
-                <div id="down" class="control control-down"><svg clip-rule="evenodd" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                <div id="down" class="control control-down"><svg role="img" aria-describedby="arrow-down"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title id="arrow-down">arrow pointing down to move the dog down</title>
                         <path
                             d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002z"
                             fill-rule="nonzero" />
                     </svg></div>
-                <div id="right" class="control control-right"><svg clip-rule="evenodd" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                <div id="right" class="control control-right"><svg role="img" aria-describedby="arrow-right"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title id="arrow-right">arrow pointing right to move the dog to the right</title>
                         <path
                             d="m13.022 14.999v3.251c0 .412.335.75.752.75.188 0 .375-.071.518-.206 1.775-1.685 4.945-4.692 6.396-6.069.2-.189.312-.452.312-.725 0-.274-.112-.536-.312-.725-1.451-1.377-4.621-4.385-6.396-6.068-.143-.136-.33-.207-.518-.207-.417 0-.752.337-.752.75v3.251h-9.02c-.531 0-1.002.47-1.002 1v3.998c0 .53.471 1 1.002 1z"
                             fill-rule="nonzero" />
@@ -228,14 +241,17 @@
                             <caption class="bigger-heading mb-1">Highscore</caption>
                             <thead>
                                 <tr class="table-heading">
-                                <th aria-label="table column for highscore position"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 10c-3.865 0-7 3.134-7 7s3.135 7 7 7 7-3.134 7-7-3.135-7-7-7zm0 12c-2.762 0-5-2.239-5-5s2.238-5 5-5 5 2.239 5 5-2.238 5-5 5zm1.484-4.315l1.516-1.457-2.083-.287-.917-1.892-.917 1.892-2.083.287 1.516 1.457-.369 2.07 1.853-.992 1.854.992-.37-2.07zm-5.484-17.685l5.958 8h-3.958l-6-8h4zm6.604 7.194l5.396-7.194h-4l-3.376 4.534 1.98 2.66z" />
-                                    </svg></th>
-                                <th>Dog</th>
-                                <th>Difficulty</th>
-                                <th>Score</th>
-                            </tr>
+                                    <th aria-label="table column for highscore position"><svg role="img"
+                                            aria-describedby="icon-medal" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24">
+                                            <title id="icon-medal">medal icon</title>
+                                            <path
+                                                d="M12 10c-3.865 0-7 3.134-7 7s3.135 7 7 7 7-3.134 7-7-3.135-7-7-7zm0 12c-2.762 0-5-2.239-5-5s2.238-5 5-5 5 2.239 5 5-2.238 5-5 5zm1.484-4.315l1.516-1.457-2.083-.287-.917-1.892-.917 1.892-2.083.287 1.516 1.457-.369 2.07 1.853-.992 1.854.992-.37-2.07zm-5.484-17.685l5.958 8h-3.958l-6-8h4zm6.604 7.194l5.396-7.194h-4l-3.376 4.534 1.98 2.66z" />
+                                        </svg></th>
+                                    <th>Dog</th>
+                                    <th>Difficulty</th>
+                                    <th>Score</th>
+                                </tr>
                             </thead>
                             <tbody></tbody>
                         </table>
