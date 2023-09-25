@@ -370,8 +370,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function calculateScore() {
         let treatsWeight = 0.6;
         let timeWeight = 0.4;
+        let difficultyWeight = {
+            easy: 0,
+            medium: 0.1,
+            hard: 0.2
+        };
 
-        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (1 / seconds) * timeWeight;
+        let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (1 / seconds) * timeWeight + difficultyWeight[START_GAME_FORM.difficulty.value];
         return Math.round(score * 100);
     }
 
