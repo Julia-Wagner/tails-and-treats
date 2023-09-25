@@ -2,6 +2,7 @@ class MazeBuilder {
     // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
     // Please acknowledge use of this code by including this header.
     // taken from https://www.the-art-of-web.com/javascript/playable-maze-generator/ and adapted to the needs of this game
+    // original base class can be found at https://www.the-art-of-web.com/maze-builder.js
     constructor(width, height) {
         this.width = width;
         this.height = height;
