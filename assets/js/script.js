@@ -113,6 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 START_GAME_MODAL.style.display = "none";
                 START_GAME_MODAL.setAttribute('aria-hidden', 'true');
                 break;
+            // game restarted - close congratulations modal
+            case RESTART:
+                CONGRATULATIONS_MODAL.style.display = "none";
+                CONGRATULATIONS_MODAL.setAttribute('aria-hidden', 'true');
+                break;
             default:
                 break;
         }
@@ -367,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let timeWeight = 0.4;
 
         let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (1 / seconds) * timeWeight;
-        return  Math.round(score * 100);
+        return Math.round(score * 100);
     }
 
     /**
@@ -376,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * @param {number} score 
      */
     function updateHighscore(score) {
+        TABLE_BODY.innerHTML = "";
         let highscoreData = [];
         let timestamp = new Date().getTime();
         let currentAttempt;
@@ -384,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (storedHighscoreData) {
             highscoreData = JSON.parse(storedHighscoreData);
-        } 
+        }
 
         highscoreData.push({
             dog: START_GAME_FORM.dog.value,
@@ -393,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timestamp: timestamp
         });
 
-        highscoreData.sort(function(a, b) {
+        highscoreData.sort(function (a, b) {
             return b.score - a.score;
         });
 
@@ -408,10 +414,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let difficultyCell = newRow.insertCell(2);
             let scoreCell = newRow.insertCell(3);
 
-            if(highscoreData[i].dog === "retriever") {
+            if (highscoreData[i].dog === "retriever") {
                 highscoreData[i].dog = "golden Retriever";
             }
-          
+
             posCell.innerText = i + 1 + ".";
             dogCell.innerText = highscoreData[i].dog.charAt(0).toUpperCase() + highscoreData[i].dog.slice(1);
             difficultyCell.innerText = highscoreData[i].difficulty.charAt(0).toUpperCase() + highscoreData[i].difficulty.slice(1);
@@ -422,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        if(currentAttempt) {
+        if (currentAttempt) {
             currentAttempt.classList.add("current-attempt");
         }
 
@@ -437,8 +443,19 @@ document.addEventListener("DOMContentLoaded", function () {
         TABLE_BODY.innerHTML = "";
     }
 
-    function restartGame() {
-        window.location.href = "/";
+    /**
+     * Reset game values and open menu.
+     * @param {event} e 
+     */
+    function restartGame(e) {
+        closeModal(e);
+        soundEating.pause();
+        treatsCollected = 0;
+        TREATS.innerText = 0;
+        TIME.innerText = "00:00";
+        openMenu();
+        MENU_NAV.style.display = "none";
+        MENU_NAV.setAttribute('aria-hidden', 'true');
     }
 
     /**
