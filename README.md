@@ -190,7 +190,8 @@ Thanks to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) 
 ### **Content**
 
 - Following the [Mozilla Developer reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const#examples) for const, I decided to use UPPER_SNAKE_CASE for my constants.
-- I used [this article on accessible modals](http://web-accessibility.carnegiemuseums.org/code/dialogs/) as reference for my modals.
+- I used [this article on accessible modals](http://web-accessibility.carnegiemuseums.org/code/dialogs/) as a reference for my modals.
+- To ensure following best practice for my SVG icons and images I read [this article on accessible SVGs](https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/).
 - I adapted the code to create my maze from the [Playable Maze Game Generator](https://www.the-art-of-web.com/javascript/playable-maze-generator/).
 - The accessible sound toggle button was adapted from [ErikKroes.nl](https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/).
 - To test my website I signed up for a free trial on [BrowserStack](https://www.browserstack.com/).
