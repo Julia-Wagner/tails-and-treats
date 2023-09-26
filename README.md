@@ -35,8 +35,10 @@
     - [**Maze**](#maze)
     - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
+  - [**Future Enhancements**](#future-enhancements)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
+    - [**Acknowledgments**](#acknowledgments)
     - [**Content**](#content)
     - [**Media and Design**](#media-and-design)
 
@@ -192,6 +194,14 @@ I added a custom 404 page to direct the user to a customized error page that is 
 
 ![404 Page](docs/screenshots/404_mobile.png)
 
+## **Future Enhancements**
+
+I believe I added all the necessary features to create a project that is ready to be used as a real-life game. However, there is always room for improvement and further features. Here are some enhancements I would like to make in the future.
+
+- The size of the maze could be adapted even better to the screen size of the user. Maybe I could find a way to calculate the size of the maze based on the used device.
+- Some of my functions can be refactored to reduce cognitive complexity.
+- I would like to remove the external class and try to build the maze completely from scratch.
+
 ## **Deployment**
 
 To be able to use Lighthouse testing right away, I deployed my website after implementing the header and footer. The steps to deploying a website on GitHub pages are:
@@ -204,6 +214,8 @@ To be able to use Lighthouse testing right away, I deployed my website after imp
 The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https://julia-wagner.github.io/tails-and-treats/)
 
 ## **Credits**
+
+### **Acknowledgments**
 
 Thanks to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) for giving me valuable feedback and tips during this project. And to my Code Institute Facilitator [Kay Welfare](https://github.com/Kathrin-ddggxh) for testing the game and making new suggestions.
 
