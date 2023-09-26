@@ -114,7 +114,7 @@ At the bottom of the footer, I have the copyright information.
 
 ### **Main Menu**
 
-The menu is the default landing page for the game. From the menu, the user can either start a new game or read the rules. If a game has already started a game, the navigation in the header allows the user to close the menu and resume playing. Under these two buttons, there is an animated image of dogs playing. The image goes well with the color scheme of the game and introduces the user to the theme of the game.
+The menu is the default landing page for the game. From the menu, the user can either start a new game or read the rules. If a game has already been started, the navigation in the header allows the user to close the menu and resume playing. Under these two buttons, there is an animated image of dogs playing. The image fits well with the color scheme of the game and introduces the user to the theme of the game.
 
 ![Main menu](docs/screenshots/main_menu.png)
 
