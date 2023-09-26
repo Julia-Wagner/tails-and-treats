@@ -38,7 +38,7 @@
   - [**Future Enhancements**](#future-enhancements)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
-    - [**Acknowledgments**](#acknowledgments)
+    - [**Acknowledgements**](#acknowledgements)
     - [**Content**](#content)
     - [**Media and Design**](#media-and-design)
 
@@ -216,9 +216,11 @@ The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https:/
 
 ## **Credits**
 
-### **Acknowledgments**
+### **Acknowledgements**
 
-Thanks to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) for giving me valuable feedback and tips during this project. And to my Code Institute Facilitator [Kay Welfare](https://github.com/Kathrin-ddggxh) for testing the game and making new suggestions.
+- Thank you to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) for giving me valuable feedback and tips during this project.
+- Thank you to my Code Institute Facilitator [Kay Welfare](https://github.com/Kathrin-ddggxh) for testing the game and making new suggestions.
+- Thanks to the (unknown to me) assessor of my first Code Institute project for suggesting to use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). I started using them for this project as soon as I got my assessment result and really grew to like this style of commit messages.
 
 ### **Content**
 
