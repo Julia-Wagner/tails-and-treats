@@ -199,6 +199,7 @@ I added a custom 404 page to direct the user to a customized error page that is 
 I believe I added all the necessary features to create a project that is ready to be used as a real-life game. However, there is always room for improvement and further features. Here are some enhancements I would like to make in the future.
 
 - The size of the maze could be adapted even better to the screen size of the user. Maybe I could find a way to calculate the size of the maze based on the used device.
+- I would like to include a database to add a public highscore so the users can compete against other users too and not only try to beat their own highscore.
 - Some of my functions can be refactored to reduce cognitive complexity.
 - I would like to remove the external class and try to build the maze completely from scratch.
 
