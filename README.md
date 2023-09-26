@@ -6,9 +6,17 @@
 
 ![Am I Responsive Screenshot](docs/screenshots/am_i_responsive.png)
 
+## **Quick Start**
+
+- Visit the [live project](https://julia-wagner.github.io/tails-and-treats/).
+- Click "Start new game" in the menu.
+- Choose a dog character and difficulty.
+- Navigate the maze to collect treats and make your dog happy!
+
 ## **Table of contents**
 
 - [**Tails and Treats: A Canine Maze Adventure**](#tails-and-treats-a-canine-maze-adventure)
+  - [**Quick Start**](#quick-start)
   - [**Table of contents**](#table-of-contents)
   - [**Planning**](#planning)
     - [**Target Audience**](#target-audience)
