@@ -2,7 +2,7 @@
 
 [Link to live project](https://julia-wagner.github.io/tails-and-treats/)
 
-*Tails and Treats: A Canine Maze Adventure* is a JavaScript-based maze game. Users can choose a dog character and navigate it through different mazes collecting treats for the dog.
+*Tails and Treats: A Canine Maze Adventure* is a JavaScript-based maze game. Users can choose a dog character and navigate it through different mazes collecting treats for the dog. The game is fully functioning and ready to play. The rules are simple and the game is easy to play, even for children. The game is responsive and can be played on all devices.
 
 ![Am I Responsive Screenshot](docs/screenshots/am_i_responsive.png)
 
@@ -74,6 +74,8 @@ I created wireframes to visualize my ideas using Balsamiq. While creating the mo
 ### **Color Scheme**
 
 To create the color scheme I started by looking for icons I could use as dog characters and treats. I picked out the main colors used for these icons and used [contrast-grid.eightshapes.com](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23F1F1F2%0D%0A%23312A28%0D%0A%23A26938%0D%0A%23EEE6D9%0D%0A%236A574A%0D%0A%23FCCD99%0D%0A%230c6d92%0D%0A%2366802B%0D%0A%23FF6431%0D%0A%23FFCF5F%0D%0A%232aa2cf&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check the contrast and possible color combinations.
+
+For the main elements of the game I mainly used the brown tones, the earthy colors seem to fit the theme of the game and give a good contrast.
 
 ![Color contrast](docs/screenshots/color_contrast.png)
 
