@@ -1,6 +1,10 @@
 # **Tails and Treats: A Canine Maze Adventure**
 
-Tails and Treats: A Canine Maze Adventure is a JavaScript-based maze game.
+[Link to live project](https://julia-wagner.github.io/tails-and-treats/)
+
+*Tails and Treats: A Canine Maze Adventure* is a JavaScript-based maze game. Users can choose a dog character and navigate it through different mazes collecting treats for the dog.
+
+![Am I Responsive Screenshot](docs/screenshots/am_i_responsive.png)
 
 ## **Table of contents**
 
