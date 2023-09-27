@@ -36,6 +36,8 @@
     - [**Congratulations modal**](#congratulations-modal)
     - [**Custom 404 Page**](#custom-404-page)
   - [**Future Enhancements**](#future-enhancements)
+  - [**Testing**](#testing)
+    - [**Manual Testing**](#manual-testing)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
     - [**Acknowledgements**](#acknowledgements)
@@ -202,6 +204,19 @@ I believe I added all the necessary features to create a project that is ready t
 - I would like to include a database to add a public highscore so the users can compete against other users too and not only try to beat their own highscore.
 - Some of my functions can be refactored to reduce cognitive complexity.
 - I would like to remove the external class and try to build the maze completely from scratch.
+
+## **Testing**
+
+### **Manual Testing**
+
+I deployed the first version of my project after finishing the header and footer. This way I was able to use Lighthouse testing right away and make improvements for accessibility and performance early. I regularly tested my live website in **Google Chrome**, resizing the browser using *Dev Tools*. I also opened the website on my phone and tablet after pushing new features. I think you get a better feeling for the mobile version of a website when opening it on a real phone, instead of a smaller browser window. Furthermore, I have **Microsoft Edge** and **Firefox** installed and made sure to open my deployed website there frequently. \
+I used the *#peer-code-review* channel on Code Institute´s Slack to get some feedback from other students and sent the link to my game to friends and family asking them to test it.
+
+I tested to a minimum screen width of **300px** and a maximum screen width of **3440px** with my monitor.
+To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](https://www.browserstack.com/).
+
+![BrowserStack testing iPhone](docs/testing/testing_iphone13_safari.png)
+![BrowserStack testing iPad](docs/testing/testing_ipad_pro_chrome.png)
 
 ## **Deployment**
 
