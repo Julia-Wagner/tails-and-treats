@@ -373,7 +373,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let difficultyWeight = {
             easy: 0,
             medium: 0.1,
-            hard: 0.2
+            hard: 0.2,
+            // same weight as hard for mobile maze as navigating with the buttons takes more time than keyboard controls
+            mobile: 0.2
         };
 
         let score = ((treatsCollected / treatsAvailable) * treatsWeight) + (1 / seconds) * timeWeight + difficultyWeight[START_GAME_FORM.difficulty.value];
