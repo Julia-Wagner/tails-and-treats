@@ -38,6 +38,10 @@
   - [**Future Enhancements**](#future-enhancements)
   - [**Testing**](#testing)
     - [**Manual Testing**](#manual-testing)
+    - [**Validation**](#validation)
+      - [**HTML**](#html)
+      - [**CSS**](#css)
+      - [**JavaScript**](#javascript)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
     - [**Acknowledgements**](#acknowledgements)
@@ -217,6 +221,41 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 ![BrowserStack testing iPhone](docs/testing/testing_iphone13_safari.png)
 ![BrowserStack testing iPad](docs/testing/testing_ipad_pro_chrome.png)
+
+### **Validation**
+
+#### **HTML**
+
+I used the [W3C Markup Validation Service](https://validator.w3.org/) to validate my HTML and don´t get any warnings or errors.
+
+![HTML Validator](docs/testing/html_validator.png)
+
+The full validation results can be found here:
+
+- [index.html](docs/testing/html_validator_index.pdf)
+- [404.html](docs/testing/html_validator_404.pdf)
+
+#### **CSS**
+
+I used the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjulia-wagner.github.io%2Ftails-and-treats%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) to validate my CSS. The validation came back with no errors or warnings.
+
+![CSS Validator](docs/testing/css_validator.png)
+
+The full validation result can be found [here](docs/testing/css_validator_results.pdf).
+
+#### **JavaScript**
+
+I used [JSHint](https://jshint.com/) to check my JavaScript. At first I got many warnings because I was using ES6 variables. This can be resolved by adding `/* jshint esversion: 6 */` as a comment in the first line of JSHint.
+
+I got no warnings or errors for both my *script.js* and *maze-builder.js* files. Only the connection I have between those two files could not be seen by JSHint. This is why I got the information of a undefined variable for my *script.js* and unused variable for my *maze-builder.js*. The MazeBuilder class is defined in *maze-builder.js* and used in *script.js*.
+
+![JSHint script.js](docs/testing/js_validator_script.png)
+![JSHint maze-builder.js](docs/testing/js_validator_maze_builder.png)
+
+The full results can be found here:
+
+- [script.js](docs/testing/js_validator_script.pdf)
+- [maze-builder.js](docs/testing/js_validator_maze_builder.pdf)
 
 ## **Deployment**
 
