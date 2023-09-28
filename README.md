@@ -228,14 +228,20 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 ### **Issues**
 
-During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that where a bit harder to make.
+During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that were a bit harder to make.
 
 1. Scattering the treats throughout the maze.
     - After using and adapting the *MazeBuilder* class to create the maze, the next step was scattering the treats to collect throughout the maze.
 
-    - My first attempt was using another class from my external reference. But with this class there where treats on fields with walls, so they could not be collected. Another problem was, that the logic to use different images as treats was really complicated and this way not all of my treat images where being used.
+    - My first attempt was using another class from my external reference. But with this class, there were treats on fields with walls, so they could not be collected. Another problem was, that the logic to use different images as treats was really complicated and this way not all of my treat images were being used.
 
-    - **Solution** - So I removed the second class and instead adapted the existing *MazeBuilder* class to add a treat to each row. Similar to how the exit and door of the maze are being added. I also adapted the styling and used different class names for each treat to make sure all of my images are being used at least once in each maze.
+    - **Solution** - I removed the second class and instead adapted the existing *MazeBuilder* class to add a treat to each row. Similar to how the exit and door of the maze are being added. I also adapted the styling and used different class names for each treat to make sure all of my images are being used at least once in each maze.
+
+2. Scrolling with keyboard controls while playing.
+    - While using the keyboard controls for moving around the maze they were also being used for their default behavior, scrolling the page. This resulted in the page jumping when moving the dog up and down.
+    - To prevent this, I used `e.preventDefault()` in my function handling the keyboard controls. This way, while playing the game, the page can not be scrolled with the keyboard controls, only with the mouse.
+    - However, I got the feedback from one test person, that they would have expected the page to scroll when the maze is bigger than the vertical screen size.
+    - **Decision** - I still decided to use `e.preventDefault()` as the jumping of the page really distracts from playing the game. After talking about this to other people testing my game, they agreed that the page jumping would be worse than having to use the mouse to scroll. In addition to this, the maze is not meant to be played on really narrow screen sizes. I extensively tested different standard screen sizes and they do not require scrolling the page to play the game.
 
 ### **Validation**
 
