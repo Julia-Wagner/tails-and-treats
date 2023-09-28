@@ -42,6 +42,7 @@
       - [**HTML**](#html)
       - [**CSS**](#css)
       - [**JavaScript**](#javascript)
+    - [**Lighthouse Testing**](#lighthouse-testing)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
     - [**Acknowledgements**](#acknowledgements)
@@ -226,7 +227,7 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 #### **HTML**
 
-I used the [W3C Markup Validation Service](https://validator.w3.org/) to validate my HTML and don´t get any warnings or errors.
+I used the [W3C Markup Validation Service](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulia-wagner.github.io%2Ftails-and-treats%2F) to validate my HTML and don´t get any warnings or errors.
 
 ![HTML Validator](docs/testing/html_validator.png)
 
@@ -256,6 +257,17 @@ The full results can be found here:
 
 - [script.js](docs/testing/js_validator_script.pdf)
 - [maze-builder.js](docs/testing/js_validator_maze_builder.pdf)
+
+### **Lighthouse Testing**
+
+I got my score for *Accessibility*, *Best Practices* and *SEO* to 100 for all mobile and desktop pages. The score for *Performance* varies between 93 and 100 depending on the size and when I run the test.
+
+![Lighthouse Score Desktop](docs/testing/lighthouse_score_desktop.png)
+![Lighthouse Score Mobile](docs/testing/lighthouse_score_mobile.png)
+
+In order to explicitly test my maze, I used the *Snapshot* mode. This test passed all audits.
+
+![Lighthouse Score Snapshot](docs/testing/lighthouse_score_snapshot.png)
 
 ## **Deployment**
 
