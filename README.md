@@ -43,6 +43,7 @@
       - [**CSS**](#css)
       - [**JavaScript**](#javascript)
     - [**Lighthouse Testing**](#lighthouse-testing)
+    - [**Accessibility Testing**](#accessibility-testing)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
     - [**Acknowledgements**](#acknowledgements)
@@ -268,6 +269,16 @@ I got my score for *Accessibility*, *Best Practices* and *SEO* to 100 for all mo
 In order to explicitly test my maze, I used the *Snapshot* mode. This test passed all audits.
 
 ![Lighthouse Score Snapshot](docs/testing/lighthouse_score_snapshot.png)
+
+### **Accessibility Testing**
+
+In addition to the Lighthouse Accessibility score, I tested my website using the [WAVE Tool](https://wave.webaim.org/) which returned no errors. It did return one alert regarding my sound toggle switch. In the WAVE reference it says, that labels are not appropriate for `<button>` elements, this is why the alert is showing. However, in the [Mozilla Developer reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) for the `<label>` element it says:
+
+> Elements that can be associated with a `<label>` element include `<button>`, `<input>` (except for type="hidden"), `<meter>`, `<output>`, `<progress>`, `<select>` and `<textarea>`.
+
+Because I have this reference assuring me that this is okay and because it is only an alert and no error, I decided to leave it like it is.
+
+![WAVE testing](docs/testing/wave_testing.png)
 
 ## **Deployment**
 
