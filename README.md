@@ -38,6 +38,7 @@
   - [**Future Enhancements**](#future-enhancements)
   - [**Testing**](#testing)
     - [**Manual Testing**](#manual-testing)
+    - [**Issues**](#issues)
     - [**Validation**](#validation)
       - [**HTML**](#html)
       - [**CSS**](#css)
@@ -224,6 +225,17 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 ![BrowserStack testing iPhone](docs/testing/testing_iphone13_safari.png)
 ![BrowserStack testing iPad](docs/testing/testing_ipad_pro_chrome.png)
+
+### **Issues**
+
+During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that where a bit harder to make.
+
+1. Scattering the treats throughout the maze.
+    - After using and adapting the *MazeBuilder* class to create the maze, the next step was scattering the treats to collect throughout the maze.
+
+    - My first attempt was using another class from my external reference. But with this class there where treats on fields with walls, so they could not be collected. Another problem was, that the logic to use different images as treats was really complicated and this way not all of my treat images where being used.
+
+    - **Solution** - So I removed the second class and instead adapted the existing *MazeBuilder* class to add a treat to each row. Similar to how the exit and door of the maze are being added. I also adapted the styling and used different class names for each treat to make sure all of my images are being used at least once in each maze.
 
 ### **Validation**
 
