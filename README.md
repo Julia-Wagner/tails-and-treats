@@ -44,6 +44,7 @@
       - [**JavaScript**](#javascript)
     - [**Lighthouse Testing**](#lighthouse-testing)
     - [**Accessibility Testing**](#accessibility-testing)
+    - [**User Story Testing**](#user-story-testing)
   - [**Deployment**](#deployment)
   - [**Credits**](#credits)
     - [**Acknowledgements**](#acknowledgements)
@@ -228,7 +229,7 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 #### **HTML**
 
-I used the [W3C Markup Validation Service](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulia-wagner.github.io%2Ftails-and-treats%2F) to validate my HTML and don´t get any warnings or errors.
+I used the [W3C Markup Validation Service](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulia-wagner.github.io%2Ftails-and-treats%2F) to validate my HTML and did not get any warnings or errors.
 
 ![HTML Validator](docs/testing/html_validator.png)
 
@@ -247,9 +248,9 @@ The full validation result can be found [here](docs/testing/css_validator_result
 
 #### **JavaScript**
 
-I used [JSHint](https://jshint.com/) to check my JavaScript. At first I got many warnings because I was using ES6 variables. This can be resolved by adding `/* jshint esversion: 6 */` as a comment in the first line of JSHint.
+I used [JSHint](https://jshint.com/) to check my JavaScript. At first, I got many warnings because I was using ES6 variables. This can be resolved by adding `/* jshint esversion: 6 */` as a comment in the first line of JSHint.
 
-I got no warnings or errors for both my *script.js* and *maze-builder.js* files. Only the connection I have between those two files could not be seen by JSHint. This is why I got the information of a undefined variable for my *script.js* and unused variable for my *maze-builder.js*. The MazeBuilder class is defined in *maze-builder.js* and used in *script.js*.
+I got no warnings or errors for both my *script.js* and *maze-builder.js* files. Only the connection I have between those two files could not be seen by JSHint. This is why I got the information of an undefined variable for my *script.js* and an unused variable for my *maze-builder.js*. The MazeBuilder class is defined in *maze-builder.js* and used in *script.js*.
 
 ![JSHint script.js](docs/testing/js_validator_script.png)
 ![JSHint maze-builder.js](docs/testing/js_validator_maze_builder.png)
@@ -272,13 +273,26 @@ In order to explicitly test my maze, I used the *Snapshot* mode. This test passe
 
 ### **Accessibility Testing**
 
-In addition to the Lighthouse Accessibility score, I tested my website using the [WAVE Tool](https://wave.webaim.org/) which returned no errors. It did return one alert regarding my sound toggle switch. In the WAVE reference it says, that labels are not appropriate for `<button>` elements, this is why the alert is showing. However, in the [Mozilla Developer reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) for the `<label>` element it says:
+In addition to the Lighthouse Accessibility score, I tested my website using the [WAVE Tool](https://wave.webaim.org/) which returned no errors. It did return one alert regarding my sound toggle switch. In the WAVE reference it says, that labels are not appropriate for `<button>` elements, this is why the alert is showing. However, in the [Mozilla Developer reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) for the `<label>` element, it says:
 
 > Elements that can be associated with a `<label>` element include `<button>`, `<input>` (except for type="hidden"), `<meter>`, `<output>`, `<progress>`, `<select>` and `<textarea>`.
 
 Because I have this reference assuring me that this is okay and because it is only an alert and no error, I decided to leave it like it is.
 
 ![WAVE testing](docs/testing/wave_testing.png)
+
+### **User Story Testing**
+
+| User Story                                                                            | Expected Result                                                                                                                           | Pass    |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| As a user, I want to play a fun game.                                                 | The game is free and easy to use and the people testing it enjoy playing the game.                                                                     | &check; |
+| As a user, I want to get better at the game and find the best way out of a maze.      | The game provides the users with feedback on how many points they got and how fast they found their way out.                              | &check; |
+| As a user, I want to control a cute dog and navigate it through the maze.             | The character to move around the maze is a dog.                                                                                           | &check; |
+| As a user, I want to collect dog treats scattered throughout the maze to get points.  | The items to collect in the maze are dog treats.                                                                                          | &check; |
+| As a user, I want to customize my game experience.                                    | The game is customizable by letting the users select a dog character and difficulty level for the maze.                                   | &check; |
+| As a user, I want to be able to see my progress throughout the game.                  | While playing the number of collected treats as well as a timer are shown.                                                                | &check; |
+| As the site owner, I want to ensure the users have a good experience playing my game. | A good user experience is ensured by a well-planned design and layout as well as cute details like the dog characters and sound effects. | &check; |
+| As the site owner, I want to provide the users with instructions and feedback.        | Clear instructions are easy to find and the users are provided with feedback and a highscore table after playing the game.                | &check; |
 
 ## **Deployment**
 
