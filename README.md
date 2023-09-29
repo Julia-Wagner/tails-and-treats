@@ -91,6 +91,10 @@ I created wireframes to visualize my ideas using Balsamiq. While creating the mo
 - [Desktop Menu](docs/wireframes/wireframe_desktop_menu.png)
 - [Desktop Game](docs/wireframes/wireframe_desktop_game.png)
 
+While coding I decided to make some small changes to these wireframes. I planned to use control buttons for the mobile version of the game. However, I decided to display the arrow controls for all screen sizes. That is because there is no way for me to know whether the user has a keyboard or not, as a tablet might be the same size as a smaller laptop.
+
+Another change is the position of the rules button. In my wireframes, I added an icon on the top left of my maze to display the rules. But as I already have a rules button in my menu, which is accessible during the game, I decided to not add this icon. I think it would possibly be confusing to have two different buttons that lead to the same content.
+
 ### **Color Scheme**
 
 To create the color scheme I started by looking for icons I could use as dog characters and treats. I picked out the main colors used for these icons and used [contrast-grid.eightshapes.com](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23F1F1F2%0D%0A%23312A28%0D%0A%23A26938%0D%0A%23EEE6D9%0D%0A%236A574A%0D%0A%23FCCD99%0D%0A%230c6d92%0D%0A%2366802B%0D%0A%23FF6431%0D%0A%23FFCF5F%0D%0A%232aa2cf&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check the contrast and possible color combinations.
@@ -164,7 +168,7 @@ If sound effects are turned on, there is an audio of a dog panting playing while
 
 ![Desktop maze](docs/screenshots/maze_start.png)
 
-While navigating through the maze, the image of the dog character is flipped so the dog´s head faces the correct direction. Under the maze, the number of collected treats as well as a timer are displayed. In the [Wireframes](#wireframes) section of this readme, I described that I would use control buttons for the mobile version of the game. However, I decided to display the arrow controls for all screen sizes. That is because there is no way for me to know whether the user has a keyboard or not, as a tablet might be the same size as a smaller laptop.
+While navigating through the maze, the image of the dog character is flipped so the dog´s head faces the correct direction. Under the maze, the number of collected treats as well as a timer are displayed.
 
 ![Desktop maze](docs/screenshots/maze_playing.png)
 
