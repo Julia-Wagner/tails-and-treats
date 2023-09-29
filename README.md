@@ -234,14 +234,22 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that were a bit harder to make.
 
-1. Scattering the treats throughout the maze.
+1. **Scattering the treats throughout the maze.**
     - After using and adapting the *MazeBuilder* class to create the maze, the next step was scattering the treats to collect throughout the maze.
 
     - My first attempt was using another class from my external reference. But with this class, there were treats on fields with walls, so they could not be collected. Another problem was, that the logic to use different images as treats was really complicated and this way not all of my treat images were being used.
 
-    - **Solution** - I removed the second class and instead adapted the existing *MazeBuilder* class to add a treat to each row. Similar to how the exit and door of the maze are being added. I also adapted the styling and used different class names for each treat to make sure all of my images are being used at least once in each maze.
+    - **Fix** - I removed the second class and instead adapted the existing *MazeBuilder* class to add a treat to each row. Similar to how the exit and door of the maze are being added. I also adapted the styling and used different class names for each treat to make sure all of my images are being used at least once in each maze.
 
-2. Scrolling with keyboard controls while playing.
+2. **Buttons with icons inside them.**
+    - I used buttons with text and an icon to close my modals. While testing, I noticed that sometimes the button was not working and the modal was not closing.
+    - Using DevTools I quickly noticed that the problem was that I have the icon wrapped inside a `<span>` element within my button. So when the icon itself was clicked, the click event for the button was not triggered.
+  
+    ![Button with icon in span](docs/testing/button_span.png)
+
+    - **Fix** - After doing some research, I found [this stackoverflow question](https://stackoverflow.com/questions/26402033/missing-click-event-for-span-inside-button-element-on-firefox) where the use of `pointer-events: none` was suggested. Adding that to my wrapped `<label>` elements fixed the issue.
+
+3. **Scrolling with keyboard controls while playing.**
     - While using the keyboard controls for moving around the maze they were also being used for their default behavior, scrolling the page. This resulted in the page jumping when moving the dog up and down.
     - To prevent this, I used `e.preventDefault()` in my function handling the keyboard controls. This way, while playing the game, the page can not be scrolled with the keyboard controls, only with the mouse.
     - However, I got the feedback from one test person, that they would have expected the page to scroll when the maze is bigger than the vertical screen size.
