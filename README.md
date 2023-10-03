@@ -150,7 +150,7 @@ I decided to use a modal to display the game rules. To ensure accessibility, I u
 
 ### **Start new game modal**
 
-One of the goals of this game is to make it customizable. That is why the user has to select a dog character and game difficulty before starting to play. To keep the page style consistent, I decided to also use a modal for the **Start new game** button. In this modal, I added a form for the user to select a dog and difficulty. There is an option pre-checked for each to ensure there is a selection made.
+One of my goals for this game is to make it customizable. That is why the user has to select a dog character and game difficulty before starting to play. To keep the page style consistent, I decided to also use a modal for the **Start new game** button. In this modal, I added a form for the user to select a dog and difficulty. There is an option pre-checked for each to ensure there is a selection made.
 
 ![Desktop start game modal](docs/screenshots/start_game_desktop.png)
 
@@ -232,7 +232,7 @@ To test **Safari** and **iOS** devices I used my free trial on [BrowserStack](ht
 
 ### **Issues**
 
-During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that were a bit harder to make.
+During this project some issues kept me thinking for longer than others. Below is a list of issues that took me a while to fix and decisions that were a bit harder to make. Besides these, some issues that came up while validating and running tests are mentioned in the associated sections of this readme and marked as `fix:` in my commits.
 
 1. **Scattering the treats throughout the maze.**
     - After using and adapting the *MazeBuilder* class to create the maze, the next step was scattering the treats to collect throughout the maze.
@@ -305,11 +305,13 @@ In order to explicitly test my maze, I used the *Snapshot* mode. This test passe
 
 In addition to the Lighthouse Accessibility score, I tested my website using the [WAVE Tool](https://wave.webaim.org/) which returned no errors. It did return one alert regarding my sound toggle switch. In the WAVE reference it says, that labels are not appropriate for `<button>` elements, this is why the alert is showing. However, in the [Mozilla Developer reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) for the `<label>` element, it says:
 
-> Elements that can be associated with a `<label>` element include `<button>`, `<input>` (except for type="hidden"), `<meter>`, `<output>`, `<progress>`, `<select>` and `<textarea>`.
+> Elements that can be associated with a `<label>` element include **`<button>`**, `<input>` (except for type="hidden"), `<meter>`, `<output>`, `<progress>`, `<select>` and `<textarea>`.
 
 Because I have this reference assuring me that this is okay and because it is only an alert and no error, I decided to leave it like it is.
 
 ![WAVE testing](docs/testing/wave_testing.png)
+
+One person testing my project provided me with a screenshot of a contrast error showing up for the sound toggle switch. However, I do not get this error on my device and I asked a third person to test it and they did not get the error either. As shown in my [Color Scheme](#color-scheme), the colors I used for the button pass the contrast check. I changed the text within the toggle switch to be bold in order to improve the contrast and readability. With this change and the confirmation of the contrast grid, I decided to consider it an edge case that I do not need to further investigate to ensure good accessibility.
 
 ### **User Story Testing**
 
@@ -341,7 +343,7 @@ The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https:/
 
 - Thank you to my Code Institute Mentor [David Bowers](https://github.com/dnlbowers) for giving me valuable feedback and tips during this project.
 - Thank you to my Code Institute Facilitator [Kay Welfare](https://github.com/Kathrin-ddggxh) for testing the game and making new suggestions.
-- Thanks to the (unknown to me) assessor of my first Code Institute project for suggesting to use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). I started using them for this project as soon as I got my assessment result and really grew to like this style of commit messages.
+- Thanks to the (unknown to me) assessor of my first Code Institute project for suggesting the use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). I started using them for this project as soon as I got my assessment result and really grew to like this style of commit messages.
 
 ### **Content**
 
@@ -351,14 +353,14 @@ The link to my live site is: [Tails and Treats: A Canine Maze Adventure](https:/
 - I adapted the code to create my maze from the [Playable Maze Game Generator](https://www.the-art-of-web.com/javascript/playable-maze-generator/).
 - The accessible sound toggle button was adapted from [ErikKroes.nl](https://www.erikkroes.nl/blog/accessible-html-toggle-button-switch/).
 - To test my website I signed up for a free trial on [BrowserStack](https://www.browserstack.com/).
-- To test accessibility on my website I used to [WAVE Tool](https://wave.webaim.org/).
+- To test accessibility on my website I used the [WAVE Tool](https://wave.webaim.org/).
 
 ### **Media and Design**
 
 - The playground image, dog characters and treats are from [Shutterstock](https://www.shutterstock.com/).
 - The other icons were embedded from [iconmonstr](https://iconmonstr.com/).
 - I used [Balsamiq](https://balsamiq.com/) to create Wireframes.
-- With [coolors.co](https://coolors.co/) I created a color scheme and used [contrast-grid.eightshapes.com](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%2383a603%0D%0A%231b4001%0D%0A%23f0deb4%0D%0A%23f6f7eb%0D%0A%23001e1d&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check the contrast and possible color combinations.
+- With [coolors.co](https://coolors.co/) I created a color scheme and used [contrast-grid.eightshapes.com](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23F1F1F2%0D%0A%23312A28%0D%0A%23A26938%0D%0A%23EEE6D9%0D%0A%236A574A%0D%0A%23FCCD99%0D%0A%230c6d92%0D%0A%2366802B%0D%0A%23FF6431%0D%0A%23FFCF5F%0D%0A%232aa2cf&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check the contrast and possible color combinations.
 - The fonts are imported from [Google Fonts](https://fonts.google.com/).
 - The screenshot at the top of this document was taken from [Am I Responsive?](https://ui.dev/amiresponsive?url=https://julia-wagner.github.io/tails-and-treats/).
   
