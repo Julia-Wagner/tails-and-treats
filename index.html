@@ -30,21 +30,22 @@
                     <span>on</span><span>off</span>
                 </button>
             </label>
-            <button id="btn-menu" class="btn btn-svg">Menu<span class="svg">
-                    <svg role="img" aria-describedby="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24">
+            <button id="btn-menu" class="btn btn-svg">Menu
+                <span class="svg">
+                    <svg role="img" aria-describedby="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <title id="icon-menu">menu icon to open the menu</title>
-                        <path
-                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
-                    </svg></span></button>
-            <button id="btn-back" class="btn btn-svg">Back to the game<span class="svg">
-                    <svg role="img" aria-describedby="icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24">
-                        <title id="icon-close">close icon to close the menu</title>
-                        <path
-                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z" />
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
                     </svg>
-                </span></button>
+                </span>
+            </button>
+            <button id="btn-back" class="btn btn-svg">Back to the game
+                <span class="svg">
+                    <svg role="img" aria-describedby="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <title id="icon-close">close icon to close the menu</title>
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z" />
+                    </svg>
+                </span>
+            </button>
         </nav>
     </header>
 
@@ -63,65 +64,54 @@
         <div aria-hidden="true" id="outer-maze-container" class="container">
             <div id="maze-container"></div>
             <div class="progress">
-                <div class="progress-icon"><svg role="img" aria-describedby="icon-star"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <div class="progress-icon">
+                    <svg role="img" aria-describedby="icon-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <title id="icon-star">star icon</title>
-                        <path
-                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                        <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
                     </svg>
                     <span id="treats" class="progress-text bold-text">0</span>
                 </div>
-                <div class="progress-icon"><svg role="img" aria-describedby="icon-clock"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <div class="progress-icon">
+                    <svg role="img" aria-describedby="icon-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <title id="icon-clock">clock icon</title>
-                        <path
-                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-8v-9h2v7h6v2z" />
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-8v-9h2v7h6v2z" />
                     </svg>
                     <span id="time" class="progress-text bold-text">00:00</span>
                 </div>
             </div>
             <div class="controls">
-                <div id="up" class="control control-up"><svg role="img" aria-describedby="arrow-up" clip-rule="evenodd"
-                        fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                <div id="up" class="control control-up">
+                    <svg role="img" aria-describedby="arrow-up" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title id="arrow-up">arrow pointing up to move the dog up</title>
-                        <path
-                            d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z"
-                            fill-rule="nonzero" />
-                    </svg></div><br>
-                <div id="left" class="control control-left"><svg role="img" aria-describedby="arrow-left"
-                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z" fill-rule="nonzero" />
+                    </svg>
+                </div><br>
+                <div id="left" class="control control-left">
+                    <svg role="img" aria-describedby="arrow-left" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title id="arrow-left">arrow pointing left to move the dog to the left</title>
-                        <path
-                            d="m10.978 14.999v3.251c0 .412-.335.75-.752.75-.188 0-.375-.071-.518-.206-1.775-1.685-4.945-4.692-6.396-6.069-.2-.189-.312-.452-.312-.725 0-.274.112-.536.312-.725 1.451-1.377 4.621-4.385 6.396-6.068.143-.136.33-.207.518-.207.417 0 .752.337.752.75v3.251h9.02c.531 0 1.002.47 1.002 1v3.998c0 .53-.471 1-1.002 1z"
-                            fill-rule="nonzero" />
-                    </svg></div>
-                <div id="down" class="control control-down"><svg role="img" aria-describedby="arrow-down"
-                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m10.978 14.999v3.251c0 .412-.335.75-.752.75-.188 0-.375-.071-.518-.206-1.775-1.685-4.945-4.692-6.396-6.069-.2-.189-.312-.452-.312-.725 0-.274.112-.536.312-.725 1.451-1.377 4.621-4.385 6.396-6.068.143-.136.33-.207.518-.207.417 0 .752.337.752.75v3.251h9.02c.531 0 1.002.47 1.002 1v3.998c0 .53-.471 1-1.002 1z" fill-rule="nonzero" />
+                    </svg>
+                </div>
+                <div id="down" class="control control-down">
+                    <svg role="img" aria-describedby="arrow-down" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title id="arrow-down">arrow pointing down to move the dog down</title>
-                        <path
-                            d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002z"
-                            fill-rule="nonzero" />
-                    </svg></div>
-                <div id="right" class="control control-right"><svg role="img" aria-describedby="arrow-right"
-                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002z" fill-rule="nonzero" />
+                    </svg>
+                </div>
+                <div id="right" class="control control-right">
+                    <svg role="img" aria-describedby="arrow-right" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title id="arrow-right">arrow pointing right to move the dog to the right</title>
-                        <path
-                            d="m13.022 14.999v3.251c0 .412.335.75.752.75.188 0 .375-.071.518-.206 1.775-1.685 4.945-4.692 6.396-6.069.2-.189.312-.452.312-.725 0-.274-.112-.536-.312-.725-1.451-1.377-4.621-4.385-6.396-6.068-.143-.136-.33-.207-.518-.207-.417 0-.752.337-.752.75v3.251h-9.02c-.531 0-1.002.47-1.002 1v3.998c0 .53.471 1 1.002 1z"
-                            fill-rule="nonzero" />
-                    </svg></div>
+                        <path d="m13.022 14.999v3.251c0 .412.335.75.752.75.188 0 .375-.071.518-.206 1.775-1.685 4.945-4.692 6.396-6.069.2-.189.312-.452.312-.725 0-.274-.112-.536-.312-.725-1.451-1.377-4.621-4.385-6.396-6.068-.143-.136-.33-.207-.518-.207-.417 0-.752.337-.752.75v3.251h-9.02c-.531 0-1.002.47-1.002 1v3.998c0 .53.471 1 1.002 1z" fill-rule="nonzero" />
+                    </svg>
+                </div>
             </div>
         </div>
 
         <!-- start game modal content -->
-        <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description"
-            aria-label="start game modal">
+        <aside aria-hidden="true" id="modal-start-game" class="modal" aria-describedby="modal-start-game-description" aria-label="start game modal">
             <div class="modal-content">
                 <button id="close-start-game" class="close btn">Close <span class="icon">&times;</span></button>
-                <div class="modal-text">
+                <section class="modal-text">
                     <h3 class="bigger-heading">Choose your dog and difficulty</h3>
                     <form method="GET" id="start-game-form" class="mt-2">
                         <fieldset class="dogs">
@@ -129,8 +119,7 @@
                             <div class="form-group">
                                 <input type="radio" id="retriever" name="dog" value="retriever" checked required>
                                 <label for="retriever">Golden Retriever
-                                    <img src="assets/images/character_retriever.svg"
-                                        alt="animated image of a Golden Retriever">
+                                    <img src="assets/images/character_retriever.svg" alt="animated image of a Golden Retriever">
                                 </label>
                             </div>
                             <div class="form-group">
@@ -154,8 +143,7 @@
                             <div class="form-group">
                                 <input type="radio" id="dachshund" name="dog" value="dachshund">
                                 <label for="dachshund">Dachshund
-                                    <img src="assets/images/character_dachshund.svg"
-                                        alt="animated image of a Dachshund">
+                                    <img src="assets/images/character_dachshund.svg" alt="animated image of a Dachshund">
                                 </label>
                             </div>
                         </fieldset>
@@ -185,7 +173,7 @@
                         </fieldset>
                         <button type="submit" class="cta-btn mt-2">Start</button>
                     </form>
-                </div>
+                </section>
                 <div class="screenreader-info" id="modal-start-game-description">
                     This is a modal which overlays the main content. The modal begins with a heading called &quot;Choose
                     your dog and difficulty&quot;.
@@ -195,11 +183,10 @@
         </aside>
 
         <!-- rules modal content -->
-        <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description"
-            aria-label="rules modal">
+        <aside aria-hidden="true" id="modal-rules" class="modal" aria-describedby="modal-rules-description" aria-label="rules modal">
             <div class="modal-content">
                 <button id="close-rules" class="close btn">Close <span class="icon">&times;</span></button>
-                <div class="modal-text">
+                <section class="modal-text">
                     <h3 class="bigger-heading">Game Rules</h3>
                     <p>To begin playing, click on <span class="bold-text">Start new game</span> in the menu. Then you
                         can select a dog character and difficulty.</p>
@@ -208,19 +195,16 @@
                         You will move your dog around the maze <span class="bold-text">collecting treats</span>. The
                         goal of the game is to collect as
                         many treats as possible and make your dog happy.
-                        After exiting the maze, you will see <span class="bold-text">how well you filled the dog´s
-                            bowl</span>.</p>
-                    <p>You can navigate the maze using either your <span class="bold-text">keyboard controls or the
-                            buttons</span>
-                        provided underneath the maze.
-                    </p>
+                        After exiting the maze, you will see <span class="bold-text">how well you filled the dog´s bowl</span>.</p>
+                    <p>You can navigate the maze using either your <span class="bold-text">keyboard controls or the buttons</span>
+                        provided underneath the maze.</p>
                     <p>Each time you start a new game, the maze is <span class="bold-text">created randomly</span> so
                         you will face a new challenge
                         each time you play. When finishing the maze, you get a <span class="bold-text">score</span>
                         based on the number of
-                        treats you collected and the time it took. Try to <span class="bold-text">beat your
-                            highscore</span> the next time you play!</p>
-                </div>
+                        treats you collected and the time it took. Try to <span class="bold-text">beat your highscore</span> 
+                        the next time you play!</p>
+                </section>
                 <div class="screenreader-info" id="modal-rules-description">
                     This is a modal which overlays the main content. The modal begins with a heading called &quot;Game
                     Rules&quot;.
@@ -230,10 +214,9 @@
         </aside>
 
         <!-- congratulations modal content -->
-        <aside aria-hidden="true" id="modal-congratulations" class="modal"
-            aria-describedby="modal-congratulations-description" aria-label="congratulations modal">
+        <aside aria-hidden="true" id="modal-congratulations" class="modal" aria-describedby="modal-congratulations-description" aria-label="congratulations modal">
             <div class="modal-content">
-                <div class="modal-text">
+                <section class="modal-text">
                     <h3 class="bigger-heading mt-2">Woof, woof!</h3>
                     <div class="congratulations-images">
                         <figure id="congratulations-dog"></figure>
@@ -245,13 +228,12 @@
                             <caption class="bigger-heading mb-1">Highscore</caption>
                             <thead>
                                 <tr class="table-heading">
-                                    <th><svg role="img" aria-describedby="icon-medal" xmlns="http://www.w3.org/2000/svg"
-                                            width="24" height="24" viewBox="0 0 24 24">
-                                            <title id="icon-medal">medal icon decorating table column for highscore
-                                                position</title>
-                                            <path
-                                                d="M12 10c-3.865 0-7 3.134-7 7s3.135 7 7 7 7-3.134 7-7-3.135-7-7-7zm0 12c-2.762 0-5-2.239-5-5s2.238-5 5-5 5 2.239 5 5-2.238 5-5 5zm1.484-4.315l1.516-1.457-2.083-.287-.917-1.892-.917 1.892-2.083.287 1.516 1.457-.369 2.07 1.853-.992 1.854.992-.37-2.07zm-5.484-17.685l5.958 8h-3.958l-6-8h4zm6.604 7.194l5.396-7.194h-4l-3.376 4.534 1.98 2.66z" />
-                                        </svg></th>
+                                    <th>
+                                        <svg role="img" aria-describedby="icon-medal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <title id="icon-medal">medal icon decorating table column for highscore position</title>
+                                            <path d="M12 10c-3.865 0-7 3.134-7 7s3.135 7 7 7 7-3.134 7-7-3.135-7-7-7zm0 12c-2.762 0-5-2.239-5-5s2.238-5 5-5 5 2.239 5 5-2.238 5-5 5zm1.484-4.315l1.516-1.457-2.083-.287-.917-1.892-.917 1.892-2.083.287 1.516 1.457-.369 2.07 1.853-.992 1.854.992-.37-2.07zm-5.484-17.685l5.958 8h-3.958l-6-8h4zm6.604 7.194l5.396-7.194h-4l-3.376 4.534 1.98 2.66z" />
+                                        </svg>
+                                    </th>
                                     <th>Dog</th>
                                     <th>Difficulty</th>
                                     <th>Score</th>
@@ -262,7 +244,7 @@
                     </div>
                     <button id="reset-highscore" class="reset-btn">Reset Highscore</button>
                     <button id="restart" class="cta-btn mt-2">Start a new game</button>
-                </div>
+                </section>
                 <div class="screenreader-info" id="modal-congratulations-description">
                     This is a modal which overlays the main content. The modal begins with a heading called
                     &quot;Congratulations&quot;.
@@ -276,20 +258,16 @@
     <footer>
         <ul>
             <li>
-                <a href="https://github.com/Julia-Wagner" class="footer-icon" target="_blank" rel="noopener"
-                    aria-label="open my GitHub profile in a new tab">
+                <a href="https://github.com/Julia-Wagner" class="footer-icon" target="_blank" rel="noopener" aria-label="open my GitHub profile in a new tab">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/julia-wagner-0ba4461a8" class="footer-icon" target="_blank"
-                    rel="noopener" aria-label="open my LinkedIn profile in a new tab">
+                <a href="https://www.linkedin.com/in/julia-wagner-0ba4461a8" class="footer-icon" target="_blank" rel="noopener" aria-label="open my LinkedIn profile in a new tab">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                 </a>
             </li>
